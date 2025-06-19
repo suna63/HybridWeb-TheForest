@@ -1,0 +1,86 @@
+@charset "utf-8"; 
+
+header{
+  position: fixed;
+  width: 100%;
+  max-width: 428px;
+  background-color: var(--primaryColor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* 메인메뉴 */
+header .main-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 428px;
+  height: 45px;
+  padding: 0 20px;
+}
+header .main-menu button{
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+header .logo img{
+  width: 50px;
+}
+header .back img{
+  width: 10px;
+}
+header .main-menu p img{
+  width: 10px;
+  opacity: 0;
+}
+
+
+/* 서브메뉴 */
+header .sub-menu{
+  background-color: #fff;
+  height: 45px;
+  width: 428px;
+  padding: 0 20px;
+  line-height: 45px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: var(--boxShadow);
+  display: flex;
+  justify-content: space-between;
+}
+header .sub-menu img{
+  width: 15px;
+  height: 15px;
+}
+
+header .sub-menu .nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: var(--primaryColor);
+  font-size: 14px;
+}
+header .sub-menu .nav span{
+  width: 2px;
+  height: 2px;
+  border-radius: 100%;
+  background-color: var(--primaryColor);
+}
+
+header .sub-menu .menu{
+  display: flex;
+  gap: 10px;
+}
+header .sub-menu .menu a{
+  color: var(--gray);
+  font-weight: 300;
+}
+header .sub-menu .menu a.active{
+  color: var(--balck);
+  font-weight: bold;
+}

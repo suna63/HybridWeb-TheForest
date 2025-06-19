@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+#cultureplex .main-desc .title,
+#choso .main-desc .title,
+#sojeon .main-desc .title,
+#academyhouse .main-desc .title,
+#seminar .main-desc .title{
+  margin-bottom: 30px;
+}
+#cultureplex h4,
+#choso h4,
+#sojeon h4,
+#academyhouse h4,
+#seminar h4{
+  font-weight: 700;
+}
+#cultureplex .main-desc p,
+#choso .main-desc p,
+#sojeon .main-desc p,
+#academyhouse .main-desc p,
+#seminar .main-desc p{
+  color: var(--gray);
+}
+
+#cultureplex .desc,
+#choso .desc,
+#sojeon .desc,
+#academyhouse .desc,
+#seminar .desc{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#cultureplex .desc .fa-solid,
+#choso .desc .fa-solid,
+#sojeon .desc .fa-solid,
+#academyhouse .desc .fa-solid,
+#seminar .desc .fa-solid{
+  color: var(--lightgray);
+  width: 20px;
+  text-align: center;
+  margin-right: 5px;
+}
+
+#cultureplex .desc .inner,
+#choso .desc .inner,
+#sojeon .desc .inner{
+  margin-left: 25px;
+}
+#choso .desc .innerinner,
+#sojeon .desc .innerinner{
+  margin-left: 50px;
+}
+
+#cultureplex .direction,
+#choso .direction,
+#sojeon .direction{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#cultureplex .direction span,
+#choso .direction span,
+#sojeon .direction span{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 100%;
+  font-weight: bold;
+  color: var(--white);
+  margin-right: 5px;
+}
+#cultureplex .direction p:nth-of-type(2) span{
+  background-color: #697215;
+}
+#cultureplex .direction p:nth-of-type(3) span{
+  background-color: #2C9EDE;
+}
+
+#choso .direction p:nth-of-type(2) span{
+  background-color: #F06E00;
+}
+#choso .direction p:nth-of-type(3) i{
+  color: #3CC344;
+}
+#choso .direction p:nth-of-type(5) i{
+  color: #87C700;
+}
+
+#sojeon .direction p:nth-of-type(2) span{
+  background-color: #8BC53F;
+}
+#sojeon .direction p:nth-of-type(3) span{
+  background-color: #263C96;
+}
+#sojeon .direction p:nth-of-type(4) i{
+  color: #87C700;
+}
+
+#academyhouse .time p{
+  font-weight: bold;
+  color: var(--black);
+}
+
+#cultureplex .location h4,
+#choso .location h4,
+#sojeon .location h4,
+#academyhouse .location h4{
+  margin-bottom: 20px;
+}
+#cultureplex .location iframe,
+#choso .location iframe,
+#sojeon .location iframe,
+#academyhouse .location iframe{
+  border-radius: var(--radius);
+}
+
+#cultureplex .fee{
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--background);
+}
+#cultureplex table caption{
+  text-align: left;
+  margin: 0 0 10px 20px;
+}
+#cultureplex table{
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 30px;
+  border-radius: var(--radius);
+  background-color: var(--white);
+  box-shadow: var(--boxShadow);
+}
+#cultureplex table tr{
+  position: relative;
+}
+#cultureplex table tr:not(:last-of-type)::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  width: 100%;
+  /* border: 1px dashed #888; */
+  height: 1px;
+  background: linear-gradient(to right, #888 0 50%, transparent 50% 100%);
+  background-size: 10px 5px;
+  background-repeat: repeat-x;
+}
+#cultureplex table td{
+  text-align: center;
+}
+#cultureplex ul{
+  padding-left: 20px;
+  list-style-type: disc;
+  color: var(--gray);
+  font-weight: normal;
+  line-height: 150%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+

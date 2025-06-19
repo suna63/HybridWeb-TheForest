@@ -1,0 +1,189 @@
+@charset "utf-8";
+
+#foundation main{
+  height: 100%;
+}
+
+/* 첫 풀페이지 */
+#foundation .top-visu{
+  height: calc(100vh - 90px - 61px);
+  background: url(../image/18.jpg) no-repeat center/cover;
+  position: relative;
+}
+#foundation .top-visu::before{
+  content: '';
+  /* width: 100%; */
+  /* height: 100%; */
+  inset: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+}
+#foundation .visu-text{
+  color: var(--white);
+  position: relative;
+  height: inherit;
+}
+#foundation .visu-text h1{
+  position: absolute;
+  top: 80px;
+  left: 20px;
+}
+#foundation .visu-text h5{
+  text-align: right;
+  position: absolute;
+  bottom: 80px;
+  right: 20px;
+}
+
+/* 공헌사업 */
+#foundation .contribution{
+  /* border: 1px solid #000; */
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 90px - 61px);
+}
+#foundation .contribution .business{
+  /* border: 1px solid red; */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+  position: relative;
+}
+#foundation .business::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+#foundation .business1::before{
+  background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1)), url(../image/business1.jpg) no-repeat center/cover;
+}
+#foundation .business2::before{
+  background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1)), url(../image/21.jpg) no-repeat center 85%/cover;
+}
+#foundation .business3::before{
+  background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1)), url(../image/13.jpg) no-repeat center 40%/cover;
+}
+#foundation .business4::before{
+  background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1)), url(../image/business4.jpg) no-repeat center 65%/cover;
+}
+#foundation .business:nth-of-type(odd)::before{
+  transform: scaleX(-1);
+}
+#foundation .business:nth-of-type(even){
+  text-align: right;
+}
+#foundation .business-text{
+  position: relative;
+  color: var(--white);
+}
+#foundation .business-text h3{
+  font-weight: 600;
+}
+
+/* 더숲티비 */
+#foundation .deosuptv{
+  padding: 25px 0;
+}
+#foundation .deosuptv h2{
+  margin: 0 20px;
+}
+
+#foundation .deosuptv .swiper-slide {
+  /* border: 1px solid blue; */
+  padding: 30px 20px;
+}
+#foundation .deosuptv .card{
+  /* border: 1px solid red; */
+  width: 388px;
+  margin: auto;
+  box-shadow: var(--boxShadow);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+#foundation .deosuptv .desc{
+  padding: 20px;
+}
+#foundation .deosuptv h4{
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#foundation .deosuptv p{
+  color: var(--gray);
+}
+#foundation .deosuptv .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+  bottom: 0;
+}
+#foundation .deosuptv .swiper-pagination-bullet-active {
+  background: var(--primaryColor);
+}
+
+/* 재단정보 */
+#foundation .found-info{
+  background-color: var(--background);
+  padding: 25px 0;
+}
+
+#foundation .found-info h2{
+  margin-left: 20px;
+}
+
+#foundation .found-info dl{
+  background-color: var(--white);
+  padding: 30px 20px;
+  line-height: 150%;
+}
+#foundation .found-info dl dt{
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+#foundation .found-info dl div{
+  margin-bottom: 20px;
+}
+#foundation .found-info dl div:last-of-type{
+  margin-bottom: 0;
+}
+
+/* 서류 */
+
+#foundation .doc li{
+  padding: 20px;
+  border-top: 1px solid var(--lightgray);
+}
+#foundation .doc li:hover{
+  background-color: var(--background);
+}
+#foundation .doc li a{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#foundation .doc .corp li:last-of-type,
+#foundation .doc .disclosure li:last-of-type{
+  border-bottom: 1px solid var(--lightgray);
+}
+
+#foundation .doc h5{
+  font-weight: 700;
+  display: inline-block;
+}
+#foundation .doc .fa-file-pdf{
+  color: #EF5350;
+}
+
+#foundation .doc .disclosure{
+  margin-top: 50px;
+}
+#foundation .doc .disclosure h5{
+  
+  width: 70px;
+  color: var(--primaryColor);
+}

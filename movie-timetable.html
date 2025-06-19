@@ -1,0 +1,3233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화 시간표</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/movie-timetable.css">
+
+</head>
+<body>
+  <header>
+    <div class="main-menu">
+      <button onclick="history.back()" class="back">
+        <img src="/assets/image/back.png" alt="뒤로가기">
+      </button>
+      <a class="logo" href="index.html">
+        <img src="assets/image/logo-w.png" alt="로고">
+      </a>
+      <p>
+        <img src="/assets/image/gotolink.png" alt="">
+      </p>
+    </div>
+    <div class="sub-menu">
+      <div class="nav">
+        <img src="/assets/image/icon_house2.png" alt="홈">
+        <span></span>
+        영화생활
+      </div>
+      <div class="menu">
+        <a href="movie-calendar.html" class="active">시간표</a>
+        <a href="movie-rental.html">대관문의</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="full">
+      <!-- 주간 메뉴 -->
+      <div class="weekly-menu">
+        <div class="weekly-item" onclick="toggleDropdown()">
+          <button class="arrow-btn" onclick="event.stopPropagation(); prevWeek()">‹</button>
+          <div class="weekly-text" id="currentWeekDisplay">06. 12 ~ 06. 18</div>
+          <button class="arrow-btn" onclick="event.stopPropagation(); nextWeek()">›</button>
+        </div>
+        
+        <!-- 드롭다운 메뉴 -->
+        <div class="dropdown-menu" id="dropdownMenu">
+          <div class="dropdown-item active" data-week="week1" data-hall="hall1">
+            <span>06. 12 ~ 06. 18</span>
+            <span>1관 / 2관</span>
+          </div>
+          <div class="dropdown-item" data-week="week2" data-hall="hall1">
+            <span>06. 05 ~ 06. 11</span>
+            <span>1관 / 2관</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 기타 메뉴 -->
+      <div class="etc-menu">
+        <a href="https://www.dtryx.com/reserve/movie.do?cgid=FE8EF4D2-F22D-4802-A39A-D58F23A29C1E&CinemaCd=000065">영화예매</a>
+        <a href="https://www.dtryx.com/cinema/main.do?cgid=FE8EF4D2-F22D-4802-A39A-D58F23A29C1E&BrandCd=indieart&CinemaCd=000065">전체 시간표 보기 ›</a>
+      </div>
+
+      <!-- 일간 메뉴 -->
+      <div class="daily-menu" id="dailyMenu">
+        <!-- 주간별로 다르게 표시됩니다 -->
+      </div>
+    </section>
+
+    <!-- 날짜별 섹션들 -->
+    <section class="scrollable-content">
+      <!-- 카테고리 안내 -->
+      <div class="information-wrap">
+        <p class="information">카테고리 안내
+          <img src="assets/image/icon-question.png" alt="안내아이콘">
+        </p>
+        <div class="category">
+          <p><span class="movie-status c1"></span>조조영화</p>
+          <p><span class="movie-status c2"></span>종영작</p>
+          <p><span class="movie-status c3"></span>개봉작</p>
+          <p><span class="movie-status c4"></span>관객과의대화</p>
+          <p><span class="movie-status c5"></span>홍상수의 단편들</p>
+          <p><span class="movie-status c6"></span>굿즈패키지 상영회</p>
+          <p><span class="movie-status c7"></span>장기상영 및 기획상영</p>
+        </div>
+      </div>
+
+      <!-- 첫 번째 주간 (06.12 ~ 06.18) -->
+      <div class="week-content active" id="week1">
+        
+        <!-- 1관/2관 데이터 -->
+        <div class="hall-content" id="week1-hall1">
+          
+          <!-- 6/12 목요일 -->
+          <section class="date-section active" data-date="12">
+            <div class="date">
+              <h3>6/12</h3>
+              <p>목</p>
+            </div>
+            <div class="inventory-wrap">
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-quiet-girl.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">말 없는 소녀</div>
+                  <div class="movie-sub-title">The Quiet Girl</div>
+                  <div class="movie-time">10:00</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c1"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-oki's-movie.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">옥희의 영화</div>
+                  <div class="movie-sub-title">Oki's Movie</div>
+                  <div class="movie-time">10:10</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c1"></div>
+                <div class="movie-status c5"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-hong-sang-soo.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">홍상수 단편선</div>
+                  <div class="movie-sub-title">Hong Sang-soo's short films</div>
+                  <div class="movie-time">11:50</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c5"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-life.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">인생은 아름다워</div>
+                  <div class="movie-sub-title">Life Is Beautiful</div>
+                  <div class="movie-time">12:00</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c3"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-the-pact.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">신명</div>
+                  <div class="movie-sub-title">The Pact</div>
+                  <div class="movie-time">13:10</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <!-- <div class="movie-status c5"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-happyend.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">해피엔드</div>
+                  <div class="movie-sub-title">Happyend</div>
+                  <div class="movie-time">14:10</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-güle.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">귤레귤레</div>
+                  <div class="movie-sub-title">Gule-Gule</div>
+                  <div class="movie-time">15:20</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c3"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-phoenician.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">페니키안 스킴</div>
+                  <div class="movie-sub-title">The Phoenician Scheme</div>
+                  <div class="movie-time">16:20</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-abroad.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">어브로드</div>
+                  <div class="movie-sub-title">Abroad</div>
+                  <div class="movie-time">17:20</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c3"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-after-yang.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">애프터 양</div>
+                  <div class="movie-sub-title">AFTER YANG</div>
+                  <div class="movie-time">18:20</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-sweet-home.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">스위트홈 감독판</div>
+                  <div class="movie-sub-title">Sweet Home</div>
+                  <div class="movie-time">19:00</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c4"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <div class="movie-poster">
+                    <img src="assets/image/movie-amelie.jpg" alt="영화포스터">
+                  </div>
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">아멜리에</div>
+                  <div class="movie-sub-title">Amelie Of Montmartre</div>
+                  <div class="movie-time">20:10</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c2"></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 6/13 금요일 -->
+          <section class="date-section" data-date="13">
+            <div class="date">
+              <h3>6/13</h3>
+              <p>금</p>
+            </div>
+            <div class="inventory-wrap">
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-wood-job.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">우드 잡!</div>
+                  <div class="movie-sub-title">Wood Job!</div>
+                  <div class="movie-time">10:00</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c1"></div>
+                <div class="movie-status c7"></div>
+              </div>
+              
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-after-yang.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">애프터 양</div>
+                  <div class="movie-sub-title">AFTER YANG</div>
+                  <div class="movie-time">10:10</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c1"></div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-carrara.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">초상화의 이면. 아카데미아 카라라의 보물들</div>
+                  <div class="movie-sub-title">Behind a Portrait. The Italian Treasures from Accademia Carrara</div>
+                  <div class="movie-time">12:00</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c7"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-the-seed.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">신성한 나무의 씨앗</div>
+                  <div class="movie-sub-title">The Seed of the Sacred Fig</div>
+                  <div class="movie-time">12:10</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <!-- <div class="movie-status c1"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-phoenician.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">페니키안 스킴</div>
+                  <div class="movie-sub-title">The Phoenician Scheme</div>
+                  <div class="movie-time">13:30</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-amadeus.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">아마데우스 오리지널</div>
+                  <div class="movie-sub-title">AMADEUS</div>
+                  <div class="movie-time">15:10</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <!-- <div class="movie-status c1"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-life.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">인생은 아름다워</div>
+                  <div class="movie-sub-title">Life Is Beautiful</div>
+                  <div class="movie-time">15:30</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c3"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-happyend.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">해피엔드</div>
+                  <div class="movie-sub-title">Happyend</div>
+                  <div class="movie-time">17:40</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-pierrot.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">미치광이 피에로</div>
+                  <div class="movie-sub-title">Pierrot Goes Wild</div>
+                  <div class="movie-time">17:40</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-sugar-glass.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">슈가 글라스 보틀</div>
+                  <div class="movie-sub-title">Sugar Glass Bottle</div>
+                  <div class="movie-time">19:50</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-no-bears.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">노 베어스</div>
+                  <div class="movie-sub-title">NO BEARS</div>
+                  <div class="movie-time">20:20</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c2"></div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-after-yang.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">애프터 양</div>
+                  <div class="movie-sub-title">AFTER YANG</div>
+                  <div class="movie-time">20:30</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 6/14 토요일 -->
+          <section class="date-section" data-date="14">
+            <div class="date">
+              <h3>6/14</h3>
+              <p>토</p>
+            </div>
+            <div class="inventory-wrap">
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-the-pact.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">신명</div>
+                  <div class="movie-sub-title">The Pact</div>
+                  <div class="movie-time">10:00</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c1"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-breaking-ice.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">브레이킹 아이스</div>
+                  <div class="movie-sub-title">The Breaking Ice</div>
+                  <div class="movie-time">10:00</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c1"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-life.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">인생은 아름다워</div>
+                  <div class="movie-sub-title">Life Is Beautiful</div>
+                  <div class="movie-time">12:00</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c3"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-carrara.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">초상화의 이면. 아카데미아 카라라의 보물들</div>
+                  <div class="movie-sub-title">Behind a Portrait. The Italian Treasures from Accademia Carrara</div>
+                  <div class="movie-time">12:20</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c7"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-phoenician.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">페니키안 스킴</div>
+                  <div class="movie-sub-title">The Phoenician Scheme</div>
+                  <div class="movie-time">14:00</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+              
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-miyazaki.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">미야자키 하야오: 자연의 영혼</div>
+                  <div class="movie-sub-title">Miyazaki: Spirit of Nature</div>
+                  <div class="movie-time">14:20</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c4"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-after-yang.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">애프터 양</div>
+                  <div class="movie-sub-title">AFTER YANG</div>
+                  <div class="movie-time">17:30</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-güle.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">귤레귤레</div>
+                  <div class="movie-sub-title">Gule-Gule</div>
+                  <div class="movie-time">16:00</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c6"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-quiet-girl.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">말 없는 소녀</div>
+                  <div class="movie-sub-title">The Quiet Girl</div>
+                  <div class="movie-time">18:10</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-sugar-glass.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">슈가 글라스 보틀</div>
+                  <div class="movie-sub-title">Sugar Glass Bottle</div>
+                  <div class="movie-time">19:30</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-pierrot.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">미치광이 피에로</div>
+                  <div class="movie-sub-title">Pierrot Goes Wild</div>
+                  <div class="movie-time">20:10</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-happyend.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">해피엔드</div>
+                  <div class="movie-sub-title">Happyend</div>
+                  <div class="movie-time">20:10</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+            </div>
+          </section>
+
+          <!-- 6/15 일요일 -->
+          <section class="date-section" data-date="15">
+            <div class="date">
+              <h3>6/15</h3>
+              <p>일</p>
+            </div>
+            <div class="inventory-wrap">
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-güle.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">귤레귤레</div>
+                  <div class="movie-sub-title">Gule-Gule</div>
+                  <div class="movie-time">10:00</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c1"></div>
+                <div class="movie-status c3"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-still-walking.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">걸어도 걸어도</div>
+                  <div class="movie-sub-title">Still Walking</div>
+                  <div class="movie-time">10:10</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c1"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-life.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">인생은 아름다워</div>
+                  <div class="movie-sub-title">Life Is Beautiful</div>
+                  <div class="movie-time">12:10</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c1"></div>
+                <div class="movie-status c3"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-after-yang.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">애프터 양</div>
+                  <div class="movie-sub-title">AFTER YANG</div>
+                  <div class="movie-time">12:20</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-the-pact.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">신명</div>
+                  <div class="movie-sub-title">The Pact</div>
+                  <div class="movie-time">14:10</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c5"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-sweet-home.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">스위트홈 감독판</div>
+                  <div class="movie-sub-title">Sweet Home</div>
+                  <div class="movie-time">14:30</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c2"></div>
+                <div class="movie-status c4"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-phoenician.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">페니키안 스킴</div>
+                  <div class="movie-sub-title">The Phoenician Scheme</div>
+                  <div class="movie-time">16:20</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-wood-job.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">우드 잡!</div>
+                  <div class="movie-sub-title">Wood Job!</div>
+                  <div class="movie-time">18:00</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-happyend.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">해피엔드</div>
+                  <div class="movie-sub-title">Happyend</div>
+                  <div class="movie-time">18:20</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-swing.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">스윙걸즈</div>
+                  <div class="movie-sub-title">Swing Girls</div>
+                  <div class="movie-time">20:20</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-after-yang.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">애프터 양</div>
+                  <div class="movie-sub-title">AFTER YANG</div>
+                  <div class="movie-time">20:30</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 6/16 월요일 -->
+          <section class="date-section" data-date="16">
+            <div class="date">
+              <h3>6/16</h3>
+              <p>월</p>
+            </div>
+            <div class="inventory-wrap">
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-happyend.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">해피엔드</div>
+                  <div class="movie-sub-title">Happyend</div>
+                  <div class="movie-time">10:00</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c1"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-life.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">인생은 아름다워</div>
+                  <div class="movie-sub-title">Life Is Beautiful</div>
+                  <div class="movie-time">10:00</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c1"></div>
+                <div class="movie-status c3"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-miyazaki.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">미야자키 하야오: 자연의 영혼</div>
+                  <div class="movie-sub-title">Miyazaki: Spirit of Nature</div>
+                  <div class="movie-time">12:10</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c4"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-amadeus.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">아마데우스 오리지널</div>
+                  <div class="movie-sub-title">AMADEUS</div>
+                  <div class="movie-time">12:20</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <!-- <div class="movie-status c1"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-phoenician.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">페니키안 스킴</div>
+                  <div class="movie-sub-title">The Phoenician Scheme</div>
+                  <div class="movie-time">14:00</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-after-yang.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">애프터 양</div>
+                  <div class="movie-sub-title">AFTER YANG</div>
+                  <div class="movie-time">15:20</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-life.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">인생은 아름다워</div>
+                  <div class="movie-sub-title">Life Is Beautiful</div>
+                  <div class="movie-time">16:00</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c3"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-sugar-glass.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">슈가 글라스 보틀</div>
+                  <div class="movie-sub-title">Sugar Glass Bottle</div>
+                  <div class="movie-time">17:10</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-oki's-movie.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">옥희의 영화</div>
+                  <div class="movie-sub-title">Oki's Movie</div>
+                  <div class="movie-time">17:50</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c5"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-breaking-ice.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">브레이킹 아이스</div>
+                  <div class="movie-sub-title">The Breaking Ice</div>
+                  <div class="movie-time">18:10</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c1"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-happyend.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">해피엔드</div>
+                  <div class="movie-sub-title">Happyend</div>
+                  <div class="movie-time">20:10</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+            </div>
+          </section>
+
+          <!-- 6/17 화요일 -->
+          <section class="date-section" data-date="17">
+            <div class="date">
+              <h3>6/17</h3>
+              <p>화</p>
+            </div>
+            <div class="inventory-wrap">
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-i-sleep.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">내가 누워있을 때</div>
+                  <div class="movie-sub-title">When I Sleep</div>
+                  <div class="movie-time">10:00</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c1"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-carrara.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">초상화의 이면. 아카데미아 카라라의 보물들</div>
+                  <div class="movie-sub-title">Behind a Portrait. The Italian Treasures from Accademia Carrara</div>
+                  <div class="movie-time">10:00</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c1"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-phoenician.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">페니키안 스킴</div>
+                  <div class="movie-sub-title">The Phoenician Scheme</div>
+                  <div class="movie-time">11:30</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-the-pact.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">신명</div>
+                  <div class="movie-sub-title">The Pact</div>
+                  <div class="movie-time">12:10</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c5"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-güle.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">귤레귤레</div>
+                  <div class="movie-sub-title">Gule-Gule</div>
+                  <div class="movie-time">14:20</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c3"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-abroad.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">어브로드</div>
+                  <div class="movie-sub-title">Abroad</div>
+                  <div class="movie-time">16:20</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c3"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-flow.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">플로우</div>
+                  <div class="movie-sub-title">FLOW</div>
+                  <div class="movie-time">16:50</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c2"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-the-pact.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">신명</div>
+                  <div class="movie-sub-title">The Pact</div>
+                  <div class="movie-time">18:00</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c5"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-swing.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">스윙걸즈</div>
+                  <div class="movie-sub-title">Swing Girls</div>
+                  <div class="movie-time">18:30</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-güle.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">귤레귤레</div>
+                  <div class="movie-sub-title">Gule-Gule</div>
+                  <div class="movie-time">20:20</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c3"></div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- 6/18 수요일 -->
+          <section class="date-section" data-date="18">
+            <div class="date">
+              <h3>6/18</h3>
+              <p>수</p>
+            </div>
+            <div class="inventory-wrap">
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-pierrot.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">미치광이 피에로</div>
+                  <div class="movie-sub-title">Pierrot Goes Wild</div>
+                  <div class="movie-time">10:00</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c1"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-breaking-ice.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">브레이킹 아이스</div>
+                  <div class="movie-sub-title">The Breaking Ice</div>
+                  <div class="movie-time">10:00</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c1"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-quiet-girl.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">말 없는 소녀</div>
+                  <div class="movie-sub-title">The Quiet Girl</div>
+                  <div class="movie-time">12:00</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-life.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">인생은 아름다워</div>
+                  <div class="movie-sub-title">Life Is Beautiful</div>
+                  <div class="movie-time">12:10</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c3"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-phoenician.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">페니키안 스킴</div>
+                  <div class="movie-sub-title">The Phoenician Scheme</div>
+                  <div class="movie-time">13:50</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-amadeus.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">아마데우스 오리지널</div>
+                  <div class="movie-sub-title">AMADEUS</div>
+                  <div class="movie-time">14:30</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c1"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-after-yang.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">애프터 양</div>
+                  <div class="movie-sub-title">AFTER YANG</div>
+                  <div class="movie-time">15:50</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-happyend.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">해피엔드</div>
+                  <div class="movie-sub-title">Happyend</div>
+                  <div class="movie-time">17:30</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-miyazaki.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">미야자키 하야오: 자연의 영혼</div>
+                  <div class="movie-sub-title">Miyazaki: Spirit of Nature</div>
+                  <div class="movie-time">17:40</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <!-- <div class="movie-status c4"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-the-seed.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">신성한 나무의 씨앗</div>
+                  <div class="movie-sub-title">The Seed of the Sacred Fig</div>
+                  <div class="movie-time">19:20</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <!-- <div class="movie-status c1"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-phoenician.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">페니키안 스킴</div>
+                  <div class="movie-sub-title">The Phoenician Scheme</div>
+                  <div class="movie-time">20:20</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+            </div>
+          </section>
+
+        </div>
+        
+      </div>
+
+      <!-- 두 번째 주간 (06.05 ~ 06.11) -->
+      <div class="week-content" id="week2">
+        
+        <!-- 1관/2관 데이터 -->
+        <div class="hall-content" id="week2-hall1">
+          
+          <!-- 6/05 목요일 -->
+          <section class="date-section active" data-date="05">
+            <div class="date">
+              <h3>6/05</h3>
+              <p>목</p>
+            </div>
+            <div class="inventory-wrap">
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-pierrot.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">미치광이 피에로</div>
+                  <div class="movie-sub-title">Pierrot Goes Wild</div>
+                  <div class="movie-time">10:00</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c1"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-breaking-ice.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">브레이킹 아이스</div>
+                  <div class="movie-sub-title">The Breaking Ice</div>
+                  <div class="movie-time">10:00</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c1"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-quiet-girl.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">말 없는 소녀</div>
+                  <div class="movie-sub-title">The Quiet Girl</div>
+                  <div class="movie-time">12:00</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-life.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">인생은 아름다워</div>
+                  <div class="movie-sub-title">Life Is Beautiful</div>
+                  <div class="movie-time">12:10</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c3"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-phoenician.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">페니키안 스킴</div>
+                  <div class="movie-sub-title">The Phoenician Scheme</div>
+                  <div class="movie-time">13:50</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-amadeus.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">아마데우스 오리지널</div>
+                  <div class="movie-sub-title">AMADEUS</div>
+                  <div class="movie-time">14:30</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c1"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-after-yang.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">애프터 양</div>
+                  <div class="movie-sub-title">AFTER YANG</div>
+                  <div class="movie-time">15:50</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-happyend.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">해피엔드</div>
+                  <div class="movie-sub-title">Happyend</div>
+                  <div class="movie-time">17:30</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-miyazaki.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">미야자키 하야오: 자연의 영혼</div>
+                  <div class="movie-sub-title">Miyazaki: Spirit of Nature</div>
+                  <div class="movie-time">17:40</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <!-- <div class="movie-status c4"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-the-seed.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">신성한 나무의 씨앗</div>
+                  <div class="movie-sub-title">The Seed of the Sacred Fig</div>
+                  <div class="movie-time">19:20</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <!-- <div class="movie-status c1"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-phoenician.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">페니키안 스킴</div>
+                  <div class="movie-sub-title">The Phoenician Scheme</div>
+                  <div class="movie-time">20:20</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+            </div>
+          </section>
+
+          <!-- 6/06 금요일 -->
+          <section class="date-section" data-date="06">
+            <div class="date">
+              <h3>6/06</h3>
+              <p>금</p>
+            </div>
+            <div class="inventory-wrap">
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-i-sleep.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">내가 누워있을 때</div>
+                  <div class="movie-sub-title">When I Sleep</div>
+                  <div class="movie-time">10:00</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c1"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-carrara.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">초상화의 이면. 아카데미아 카라라의 보물들</div>
+                  <div class="movie-sub-title">Behind a Portrait. The Italian Treasures from Accademia Carrara</div>
+                  <div class="movie-time">10:00</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c1"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-phoenician.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">페니키안 스킴</div>
+                  <div class="movie-sub-title">The Phoenician Scheme</div>
+                  <div class="movie-time">11:30</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-the-pact.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">신명</div>
+                  <div class="movie-sub-title">The Pact</div>
+                  <div class="movie-time">12:10</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c5"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-güle.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">귤레귤레</div>
+                  <div class="movie-sub-title">Gule-Gule</div>
+                  <div class="movie-time">14:20</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c3"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-abroad.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">어브로드</div>
+                  <div class="movie-sub-title">Abroad</div>
+                  <div class="movie-time">16:20</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c3"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-flow.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">플로우</div>
+                  <div class="movie-sub-title">FLOW</div>
+                  <div class="movie-time">16:50</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c2"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-the-pact.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">신명</div>
+                  <div class="movie-sub-title">The Pact</div>
+                  <div class="movie-time">18:00</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c5"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-swing.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">스윙걸즈</div>
+                  <div class="movie-sub-title">Swing Girls</div>
+                  <div class="movie-time">18:30</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-güle.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">귤레귤레</div>
+                  <div class="movie-sub-title">Gule-Gule</div>
+                  <div class="movie-time">20:20</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c3"></div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- 나머지 날짜들 -->
+          <section class="date-section" data-date="07">
+            <div class="date">
+              <h3>6/07</h3>
+              <p>토</p>
+            </div>
+            <div class="inventory-wrap">
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-happyend.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">해피엔드</div>
+                  <div class="movie-sub-title">Happyend</div>
+                  <div class="movie-time">10:00</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c1"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-life.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">인생은 아름다워</div>
+                  <div class="movie-sub-title">Life Is Beautiful</div>
+                  <div class="movie-time">10:00</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c1"></div>
+                <div class="movie-status c3"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-miyazaki.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">미야자키 하야오: 자연의 영혼</div>
+                  <div class="movie-sub-title">Miyazaki: Spirit of Nature</div>
+                  <div class="movie-time">12:10</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c4"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-amadeus.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">아마데우스 오리지널</div>
+                  <div class="movie-sub-title">AMADEUS</div>
+                  <div class="movie-time">12:20</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <!-- <div class="movie-status c1"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-phoenician.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">페니키안 스킴</div>
+                  <div class="movie-sub-title">The Phoenician Scheme</div>
+                  <div class="movie-time">14:00</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-after-yang.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">애프터 양</div>
+                  <div class="movie-sub-title">AFTER YANG</div>
+                  <div class="movie-time">15:20</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-life.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">인생은 아름다워</div>
+                  <div class="movie-sub-title">Life Is Beautiful</div>
+                  <div class="movie-time">16:00</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c3"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-sugar-glass.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">슈가 글라스 보틀</div>
+                  <div class="movie-sub-title">Sugar Glass Bottle</div>
+                  <div class="movie-time">17:10</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-oki's-movie.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">옥희의 영화</div>
+                  <div class="movie-sub-title">Oki's Movie</div>
+                  <div class="movie-time">17:50</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c5"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-breaking-ice.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">브레이킹 아이스</div>
+                  <div class="movie-sub-title">The Breaking Ice</div>
+                  <div class="movie-time">18:10</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c1"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-happyend.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">해피엔드</div>
+                  <div class="movie-sub-title">Happyend</div>
+                  <div class="movie-time">20:10</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+            </div>
+          </section>
+
+          <section class="date-section" data-date="08">
+            <div class="date">
+              <h3>6/08</h3>
+              <p>일</p>
+            </div>
+            <div class="inventory-wrap">
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-güle.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">귤레귤레</div>
+                  <div class="movie-sub-title">Gule-Gule</div>
+                  <div class="movie-time">10:00</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c1"></div>
+                <div class="movie-status c3"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-still-walking.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">걸어도 걸어도</div>
+                  <div class="movie-sub-title">Still Walking</div>
+                  <div class="movie-time">10:10</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c1"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-life.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">인생은 아름다워</div>
+                  <div class="movie-sub-title">Life Is Beautiful</div>
+                  <div class="movie-time">12:10</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c1"></div>
+                <div class="movie-status c3"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-after-yang.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">애프터 양</div>
+                  <div class="movie-sub-title">AFTER YANG</div>
+                  <div class="movie-time">12:20</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-the-pact.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">신명</div>
+                  <div class="movie-sub-title">The Pact</div>
+                  <div class="movie-time">14:10</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c5"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-sweet-home.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">스위트홈 감독판</div>
+                  <div class="movie-sub-title">Sweet Home</div>
+                  <div class="movie-time">14:30</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c2"></div>
+                <div class="movie-status c4"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-phoenician.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">페니키안 스킴</div>
+                  <div class="movie-sub-title">The Phoenician Scheme</div>
+                  <div class="movie-time">16:20</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-wood-job.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">우드 잡!</div>
+                  <div class="movie-sub-title">Wood Job!</div>
+                  <div class="movie-time">18:00</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-happyend.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">해피엔드</div>
+                  <div class="movie-sub-title">Happyend</div>
+                  <div class="movie-time">18:20</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-swing.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">스윙걸즈</div>
+                  <div class="movie-sub-title">Swing Girls</div>
+                  <div class="movie-time">20:20</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-after-yang.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">애프터 양</div>
+                  <div class="movie-sub-title">AFTER YANG</div>
+                  <div class="movie-time">20:30</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="date-section" data-date="09">
+            <div class="date">
+              <h3>6/09</h3>
+              <p>월</p>
+            </div>
+            <div class="inventory-wrap">
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-the-pact.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">신명</div>
+                  <div class="movie-sub-title">The Pact</div>
+                  <div class="movie-time">10:00</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c1"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-breaking-ice.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">브레이킹 아이스</div>
+                  <div class="movie-sub-title">The Breaking Ice</div>
+                  <div class="movie-time">10:00</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c1"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-life.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">인생은 아름다워</div>
+                  <div class="movie-sub-title">Life Is Beautiful</div>
+                  <div class="movie-time">12:00</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c3"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-carrara.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">초상화의 이면. 아카데미아 카라라의 보물들</div>
+                  <div class="movie-sub-title">Behind a Portrait. The Italian Treasures from Accademia Carrara</div>
+                  <div class="movie-time">12:20</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c7"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-phoenician.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">페니키안 스킴</div>
+                  <div class="movie-sub-title">The Phoenician Scheme</div>
+                  <div class="movie-time">14:00</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+              
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-miyazaki.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">미야자키 하야오: 자연의 영혼</div>
+                  <div class="movie-sub-title">Miyazaki: Spirit of Nature</div>
+                  <div class="movie-time">14:20</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c4"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-after-yang.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">애프터 양</div>
+                  <div class="movie-sub-title">AFTER YANG</div>
+                  <div class="movie-time">17:30</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-güle.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">귤레귤레</div>
+                  <div class="movie-sub-title">Gule-Gule</div>
+                  <div class="movie-time">16:00</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c6"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-quiet-girl.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">말 없는 소녀</div>
+                  <div class="movie-sub-title">The Quiet Girl</div>
+                  <div class="movie-time">18:10</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-sugar-glass.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">슈가 글라스 보틀</div>
+                  <div class="movie-sub-title">Sugar Glass Bottle</div>
+                  <div class="movie-time">19:30</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-pierrot.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">미치광이 피에로</div>
+                  <div class="movie-sub-title">Pierrot Goes Wild</div>
+                  <div class="movie-time">20:10</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-happyend.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">해피엔드</div>
+                  <div class="movie-sub-title">Happyend</div>
+                  <div class="movie-time">20:10</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+            </div>
+          </section>
+
+          <section class="date-section" data-date="10">
+            <div class="date">
+              <h3>6/10</h3>
+              <p>화</p>
+            </div>
+            <div class="inventory-wrap">
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-wood-job.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">우드 잡!</div>
+                  <div class="movie-sub-title">Wood Job!</div>
+                  <div class="movie-time">10:00</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c1"></div>
+                <div class="movie-status c7"></div>
+              </div>
+              
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-after-yang.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">애프터 양</div>
+                  <div class="movie-sub-title">AFTER YANG</div>
+                  <div class="movie-time">10:10</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c1"></div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-carrara.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">초상화의 이면. 아카데미아 카라라의 보물들</div>
+                  <div class="movie-sub-title">Behind a Portrait. The Italian Treasures from Accademia Carrara</div>
+                  <div class="movie-time">12:00</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c7"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-the-seed.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">신성한 나무의 씨앗</div>
+                  <div class="movie-sub-title">The Seed of the Sacred Fig</div>
+                  <div class="movie-time">12:10</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <!-- <div class="movie-status c1"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-phoenician.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">페니키안 스킴</div>
+                  <div class="movie-sub-title">The Phoenician Scheme</div>
+                  <div class="movie-time">13:30</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-amadeus.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">아마데우스 오리지널</div>
+                  <div class="movie-sub-title">AMADEUS</div>
+                  <div class="movie-time">15:10</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <!-- <div class="movie-status c1"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-life.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">인생은 아름다워</div>
+                  <div class="movie-sub-title">Life Is Beautiful</div>
+                  <div class="movie-time">15:30</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c3"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-happyend.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">해피엔드</div>
+                  <div class="movie-sub-title">Happyend</div>
+                  <div class="movie-time">17:40</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-pierrot.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">미치광이 피에로</div>
+                  <div class="movie-sub-title">Pierrot Goes Wild</div>
+                  <div class="movie-time">17:40</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-sugar-glass.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">슈가 글라스 보틀</div>
+                  <div class="movie-sub-title">Sugar Glass Bottle</div>
+                  <div class="movie-time">19:50</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-no-bears.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">노 베어스</div>
+                  <div class="movie-sub-title">NO BEARS</div>
+                  <div class="movie-time">20:20</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c2"></div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-after-yang.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">애프터 양</div>
+                  <div class="movie-sub-title">AFTER YANG</div>
+                  <div class="movie-time">20:30</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="date-section" data-date="11">
+            <div class="date">
+              <h3>6/11</h3>
+              <p>수</p>
+            </div>
+            <div class="inventory-wrap">
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-quiet-girl.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">말 없는 소녀</div>
+                  <div class="movie-sub-title">The Quiet Girl</div>
+                  <div class="movie-time">10:00</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c1"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-oki's-movie.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">옥희의 영화</div>
+                  <div class="movie-sub-title">Oki's Movie</div>
+                  <div class="movie-time">10:10</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c1"></div>
+                <div class="movie-status c5"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-hong-sang-soo.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">홍상수 단편선</div>
+                  <div class="movie-sub-title">Hong Sang-soo's short films</div>
+                  <div class="movie-time">11:50</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c5"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-life.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">인생은 아름다워</div>
+                  <div class="movie-sub-title">Life Is Beautiful</div>
+                  <div class="movie-time">12:00</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c3"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-the-pact.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">신명</div>
+                  <div class="movie-sub-title">The Pact</div>
+                  <div class="movie-time">13:10</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <!-- <div class="movie-status c5"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-happyend.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">해피엔드</div>
+                  <div class="movie-sub-title">Happyend</div>
+                  <div class="movie-time">14:10</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-güle.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">귤레귤레</div>
+                  <div class="movie-sub-title">Gule-Gule</div>
+                  <div class="movie-time">15:20</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c3"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-phoenician.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">페니키안 스킴</div>
+                  <div class="movie-sub-title">The Phoenician Scheme</div>
+                  <div class="movie-time">16:20</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <!-- <div class="movie-status c3"></div> -->
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-abroad.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">어브로드</div>
+                  <div class="movie-sub-title">Abroad</div>
+                  <div class="movie-time">17:20</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c3"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-after-yang.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">애프터 양</div>
+                  <div class="movie-sub-title">AFTER YANG</div>
+                  <div class="movie-time">18:20</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c7"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <img src="assets/image/movie-sweet-home.jpg" alt="영화포스터">
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">스위트홈 감독판</div>
+                  <div class="movie-sub-title">Sweet Home</div>
+                  <div class="movie-time">19:00</div>
+                  <div class="movie-hall">2관</div>
+                </div>
+                <div class="movie-status c4"></div>
+              </div>
+
+              <div class="movie-item">
+                <div class="movie-poster">
+                  <div class="movie-poster">
+                    <img src="assets/image/movie-amelie.jpg" alt="영화포스터">
+                  </div>
+                </div>
+                <div class="movie-info">
+                  <div class="movie-title">아멜리에</div>
+                  <div class="movie-sub-title">Amelie Of Montmartre</div>
+                  <div class="movie-time">20:10</div>
+                  <div class="movie-hall">1관</div>
+                </div>
+                <div class="movie-status c2"></div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <nav class="footer-nav">
+      <a href="culture-anyway.html" class="nav-item">
+        <div class="nav-icon">
+          <img src="assets/image/icon-culture.png" alt="문화생활">
+        </div>
+        <span>문화생활</span>
+      </a>
+      <a href="movie-calendar.html" class="nav-item active ">
+        <div class="nav-icon">
+          <img src="assets/image/icon-movie-active.png" alt="영화생활">
+        </div>
+        <span>영화생활</span>
+      </a>
+      <div style="width: 40px;"></div>
+      <a href="cafe-bakery.html" class="nav-item">
+        <div class="nav-icon">
+          <img src="assets/image/icon-cafe.png" alt="카페생활">
+        </div>
+        <span>카페생활</span>
+      </a>
+      <a href="info-map.html" class="nav-item">
+        <div class="nav-icon">
+          <img src="assets/image/icon-the-forest.png" alt="더숲안내">
+        </div>
+        <span>더숲안내</span>
+      </a>
+    </nav>
+    <div class="home-button">
+      <a href="index.html" class="nav-item">
+        <div class="nav-icon">
+          <img src="assets/image/icon-house.png" alt="홈">
+        </div>
+      </a>
+    </div>
+  </footer>
+
+  <!-- script -->
+  <script>
+    // 현재 상태
+    let currentWeek = 'week1';
+    let currentHall = 'hall1';
+    let currentDate = 0;
+
+    // 주간별 날짜 데이터
+    const weekDates = {
+      week1: [
+        { number: '12', day: '목' },
+        { number: '13', day: '금' },
+        { number: '14', day: '토' },
+        { number: '15', day: '일' },
+        { number: '16', day: '월' },
+        { number: '17', day: '화' },
+        { number: '18', day: '수' }
+      ],
+      week2: [
+        { number: '05', day: '목' },
+        { number: '06', day: '금' },
+        { number: '07', day: '토' },
+        { number: '08', day: '일' },
+        { number: '09', day: '월' },
+        { number: '10', day: '화' },
+        { number: '11', day: '수' }
+      ]
+    };
+
+    const weekDisplays = {
+      week1: '06. 12 ~ 06. 18',
+      week2: '06. 05 ~ 06. 11'
+    };
+
+    // 일간 메뉴 생성
+    function generateDailyMenu() {
+      const dailyMenu = document.getElementById('dailyMenu');
+      const dates = weekDates[currentWeek];
+      
+      dailyMenu.innerHTML = '';
+      
+      dates.forEach((date, index) => {
+        const item = document.createElement('div');
+        item.className = 'daily-item';
+        if (index === currentDate) {
+          item.classList.add('active');
+        }
+        
+        item.innerHTML = `
+          <div class="daily-number">${date.number}</div>
+          <div class="daily-day">${date.day}</div>
+        `;
+        
+        item.onclick = () => showDate(index);
+        dailyMenu.appendChild(item);
+      });
+    }
+
+    // 날짜 표시
+    function showDate(dateIndex) {
+      currentDate = dateIndex;
+      
+      // 현재 주간의 현재 관에서 모든 섹션 숨기기
+      const currentWeekElement = document.getElementById(currentWeek);
+      const currentHallElement = document.getElementById(`${currentWeek}-${currentHall}`);
+      const sections = currentHallElement.querySelectorAll('.date-section');
+      
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      
+      // 선택한 날짜 섹션 표시
+      const dates = weekDates[currentWeek];
+      const targetDate = dates[dateIndex].number;
+      const targetSection = currentHallElement.querySelector(`[data-date="${targetDate}"]`);
+      if (targetSection) {
+        targetSection.classList.add('active');
+      }
+      
+      // 일간 메뉴 활성 상태 업데이트
+      document.querySelectorAll('.daily-item').forEach((item, index) => {
+        item.classList.toggle('active', index === dateIndex);
+      });
+    }
+
+    // 주간/관 변경
+    function changeWeekHall(week, hall) {
+      currentWeek = week;
+      currentHall = hall;
+      currentDate = 0;
+      
+      // 주간 표시 업데이트
+      document.getElementById('currentWeekDisplay').textContent = weekDisplays[week];
+      
+      // 모든 주간 콘텐츠 숨기기
+      document.querySelectorAll('.week-content').forEach(content => {
+        content.classList.remove('active');
+      });
+      
+      // 선택한 주간 표시
+      document.getElementById(week).classList.add('active');
+      
+      // 모든 관 콘텐츠 숨기기
+      document.querySelectorAll('.hall-content').forEach(hall => {
+        hall.style.display = 'none';
+      });
+      
+      // 선택한 관 표시
+      document.getElementById(`${week}-${hall}`).style.display = 'block';
+      
+      // 일간 메뉴 재생성
+      generateDailyMenu();
+      
+      // 첫 번째 날짜 표시
+      showDate(0);
+      
+      // 드롭다운 활성 상태 업데이트
+      updateDropdownActive();
+    }
+
+    // 드롭다운 활성 상태 업데이트
+    function updateDropdownActive() {
+      document.querySelectorAll('.dropdown-item').forEach(item => {
+        item.classList.remove('active');
+        if (item.dataset.week === currentWeek && item.dataset.hall === currentHall) {
+          item.classList.add('active');
+        }
+      });
+    }
+
+    // 이전/다음 주 (2개 주간만 순환)
+    function prevWeek() {
+      const newWeek = currentWeek === 'week1' ? 'week2' : 'week1';
+      changeWeekHall(newWeek, currentHall);
+    }
+
+    function nextWeek() {
+      const newWeek = currentWeek === 'week1' ? 'week2' : 'week1';
+      changeWeekHall(newWeek, currentHall);
+    }
+
+    // 드롭다운 토글
+    function toggleDropdown() {
+      const dropdown = document.getElementById('dropdownMenu');
+      dropdown.classList.toggle('show');
+      
+      if (dropdown.classList.contains('show')) {
+        setTimeout(() => {
+          document.addEventListener('click', closeDropdownOnClickOutside);
+        }, 0);
+      }
+    }
+
+    function closeDropdown() {
+      document.getElementById('dropdownMenu').classList.remove('show');
+      document.removeEventListener('click', closeDropdownOnClickOutside);
+    }
+
+    function closeDropdownOnClickOutside(event) {
+      const dropdown = document.getElementById('dropdownMenu');
+      const weeklyMenu = document.querySelector('.weekly-menu');
+      
+      if (!weeklyMenu.contains(event.target)) {
+        closeDropdown();
+      }
+    }
+
+    // 드롭다운 아이템 클릭 이벤트
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+      item.addEventListener('click', function() {
+        const week = this.dataset.week;
+        const hall = this.dataset.hall;
+        changeWeekHall(week, hall);
+        closeDropdown();
+      });
+    });
+
+    // 키보드 네비게이션
+    document.addEventListener('keydown', function(e) {
+      const dates = weekDates[currentWeek];
+      
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        currentDate = (currentDate - 1 + dates.length) % dates.length;
+        showDate(currentDate);
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        currentDate = (currentDate + 1) % dates.length;
+        showDate(currentDate);
+      }
+    });
+
+    // 터치 스와이프 지원
+    let startX = 0;
+    let startY = 0;
+
+    document.addEventListener('touchstart', function(e) {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+    });
+
+    document.addEventListener('touchend', function(e) {
+      if (!startX || !startY) return;
+      
+      const endX = e.changedTouches[0].clientX;
+      const endY = e.changedTouches[0].clientY;
+      
+      const diffX = startX - endX;
+      const diffY = startY - endY;
+      
+      // 수평 스와이프가 수직 스와이프보다 클 때만 처리
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+        const dates = weekDates[currentWeek];
+        
+        if (diffX > 0) {
+          // 왼쪽으로 스와이프 (다음 날짜)
+          currentDate = (currentDate + 1) % dates.length;
+          showDate(currentDate);
+        } else {
+          // 오른쪽으로 스와이프 (이전 날짜)
+          currentDate = (currentDate - 1 + dates.length) % dates.length;
+          showDate(currentDate);
+        }
+      }
+      
+      startX = 0;
+      startY = 0;
+    });
+
+    // 초기화
+    document.addEventListener('DOMContentLoaded', function() {
+      generateDailyMenu();
+      showDate(0);
+    });
+
+    // DOM이 이미 로드된 경우를 위한 fallback
+    if (document.readyState !== 'loading') {
+      generateDailyMenu();
+      showDate(0);
+    }
+  </script>
+
+
+  <!-- <script>
+    // 4개 주간 독립 데이터 구조
+    const weekData = [
+      {
+        id: 'week-0',
+        period: '06. 12 ~ 06. 18',
+        dates: [
+          { id: '12', number: '12', day: '목', fullDate: '6/12' },
+          { id: '13', number: '13', day: '금', fullDate: '6/13' },
+          { id: '14', number: '14', day: '토', fullDate: '6/14' },
+          { id: '15', number: '15', day: '일', fullDate: '6/15' },
+          { id: '16', number: '16', day: '월', fullDate: '6/16' },
+          { id: '17', number: '17', day: '화', fullDate: '6/17' },
+          { id: '18', number: '18', day: '수', fullDate: '6/18' }
+        ],
+        movies: {
+          '12': {
+            hall1: [
+              { title: '초상화의 아빠, 아가다마야 키라리의 보물들', time: '10:10' },
+              { title: '초상화의 아빠, 아가다마야 키라리의 보물들', time: '14:30' },
+              { title: '초상화의 아빠, 아가다마야 키라리의 보물들', time: '18:45' }
+            ],
+            hall2: [
+              { title: '다른 영화 제목', time: '11:20' },
+              { title: '다른 영화 제목', time: '16:00' }
+            ]
+          },
+          '13': {
+            hall1: [
+              { title: '금요일 상영작 1관', time: '11:00' },
+              { title: '금요일 상영작 1관', time: '15:30' }
+            ],
+            hall2: [
+              { title: '금요일 상영작 2관', time: '13:15' },
+              { title: '금요일 상영작 2관', time: '19:20' }
+            ]
+          },
+          '14': {
+            hall1: [{ title: '주말 특별상영', time: '15:20' }],
+            hall2: [{ title: '토요일 2관 영화', time: '12:30' }]
+          },
+          '15': {
+            hall1: [{ title: '일요일 상영작', time: '13:45' }],
+            hall2: [{ title: '일요일 2관 영화', time: '17:10' }]
+          },
+          '16': {
+            hall1: [{ title: '월요일 상영작', time: '19:30' }],
+            hall2: []
+          },
+          '17': {
+            hall1: [{ title: '화요일 상영작', time: '16:15' }],
+            hall2: [{ title: '화요일 2관 영화', time: '20:00' }]
+          },
+          '18': {
+            hall1: [{ title: '수요일 상영작', time: '12:00' }],
+            hall2: [{ title: '수요일 2관 영화', time: '14:45' }]
+          }
+        }
+      },
+      {
+        id: 'week-1',
+        period: '06. 05 ~ 06. 11',
+        dates: [
+          { id: '05', number: '05', day: '목', fullDate: '6/05' },
+          { id: '06', number: '06', day: '금', fullDate: '6/06' },
+          { id: '07', number: '07', day: '토', fullDate: '6/07' },
+          { id: '08', number: '08', day: '일', fullDate: '6/08' },
+          { id: '09', number: '09', day: '월', fullDate: '6/09' },
+          { id: '10', number: '10', day: '화', fullDate: '6/10' },
+          { id: '11', number: '11', day: '수', fullDate: '6/11' }
+        ],
+        movies: {
+          '05': {
+            hall1: [{ title: '이전주 목요일 영화', time: '10:30' }],
+            hall2: [{ title: '이전주 목요일 2관', time: '14:00' }]
+          },
+          '06': {
+            hall1: [{ title: '이전주 금요일 영화', time: '11:15' }],
+            hall2: [{ title: '이전주 금요일 2관', time: '16:30' }]
+          },
+          '07': {
+            hall1: [{ title: '이전주 토요일 영화', time: '13:20' }],
+            hall2: []
+          },
+          '08': {
+            hall1: [{ title: '이전주 일요일 영화', time: '15:45' }],
+            hall2: [{ title: '이전주 일요일 2관', time: '18:10' }]
+          },
+          '09': {
+            hall1: [{ title: '이전주 월요일 영화', time: '20:00' }],
+            hall2: []
+          },
+          '10': {
+            hall1: [{ title: '이전주 화요일 영화', time: '17:30' }],
+            hall2: [{ title: '이전주 화요일 2관', time: '21:15' }]
+          },
+          '11': {
+            hall1: [{ title: '이전주 수요일 영화', time: '12:45' }],
+            hall2: [{ title: '이전주 수요일 2관', time: '19:20' }]
+          }
+        }
+      },
+      {
+        id: 'week-2',
+        period: '05. 29 ~ 06. 04',
+        dates: [
+          { id: '29', number: '29', day: '목', fullDate: '5/29' },
+          { id: '30', number: '30', day: '금', fullDate: '5/30' },
+          { id: '31', number: '31', day: '토', fullDate: '5/31' },
+          { id: '01', number: '01', day: '일', fullDate: '6/01' },
+          { id: '02', number: '02', day: '월', fullDate: '6/02' },
+          { id: '03', number: '03', day: '화', fullDate: '6/03' },
+          { id: '04', number: '04', day: '수', fullDate: '6/04' }
+        ],
+        movies: {
+          '29': {
+            hall1: [{ title: '5월 마지막주 목요일', time: '09:50' }],
+            hall2: [{ title: '5월 마지막주 목요일 2관', time: '13:25' }]
+          },
+          '30': {
+            hall1: [{ title: '5월 마지막주 금요일', time: '10:40' }],
+            hall2: []
+          },
+          '31': {
+            hall1: [{ title: '5월 마지막 토요일', time: '14:15' }],
+            hall2: [{ title: '5월 마지막 토요일 2관', time: '17:50' }]
+          },
+          '01': {
+            hall1: [{ title: '6월 첫째주 일요일', time: '16:30' }],
+            hall2: [{ title: '6월 첫째주 일요일 2관', time: '20:05' }]
+          },
+          '02': {
+            hall1: [{ title: '6월 첫째주 월요일', time: '18:40' }],
+            hall2: []
+          },
+          '03': {
+            hall1: [{ title: '6월 첫째주 화요일', time: '15:55' }],
+            hall2: [{ title: '6월 첫째주 화요일 2관', time: '19:35' }]
+          },
+          '04': {
+            hall1: [{ title: '6월 첫째주 수요일', time: '11:10' }],
+            hall2: [{ title: '6월 첫째주 수요일 2관', time: '14:25' }]
+          }
+        }
+      },
+      {
+        id: 'week-3',
+        period: '05. 22 ~ 05. 28',
+        dates: [
+          { id: '22', number: '22', day: '목', fullDate: '5/22' },
+          { id: '23', number: '23', day: '금', fullDate: '5/23' },
+          { id: '24', number: '24', day: '토', fullDate: '5/24' },
+          { id: '25', number: '25', day: '일', fullDate: '5/25' },
+          { id: '26', number: '26', day: '월', fullDate: '5/26' },
+          { id: '27', number: '27', day: '화', fullDate: '5/27' },
+          { id: '28', number: '28', day: '수', fullDate: '5/28' }
+        ],
+        movies: {
+          '22': {
+            hall1: [{ title: '5월 넷째주 목요일', time: '08:30' }],
+            hall2: [{ title: '5월 넷째주 목요일 2관', time: '12:15' }]
+          },
+          '23': {
+            hall1: [{ title: '5월 넷째주 금요일', time: '09:45' }],
+            hall2: [{ title: '5월 넷째주 금요일 2관', time: '15:20' }]
+          },
+          '24': {
+            hall1: [{ title: '5월 넷째주 토요일', time: '13:35' }],
+            hall2: []
+          },
+          '25': {
+            hall1: [{ title: '5월 넷째주 일요일', time: '16:50' }],
+            hall2: [{ title: '5월 넷째주 일요일 2관', time: '20:30' }]
+          },
+          '26': {
+            hall1: [{ title: '5월 넷째주 월요일', time: '17:25' }],
+            hall2: []
+          },
+          '27': {
+            hall1: [{ title: '5월 넷째주 화요일', time: '14:40' }],
+            hall2: [{ title: '5월 넷째주 화요일 2관', time: '18:55' }]
+          },
+          '28': {
+            hall1: [{ title: '5월 넷째주 수요일', time: '10:20' }],
+            hall2: [{ title: '5월 넷째주 수요일 2관', time: '16:05' }]
+          }
+        }
+      }
+    ];
+
+    // 현재 상태
+    let currentWeekIndex = 0;
+    let currentHall = 'hall1'; // 'hall1' 또는 'hall2'
+    let currentDateIndex = 0;
+
+    // 초기화
+    function init() {
+      generateDropdownMenu();
+      changeWeek(0);
+    }
+
+    // 드롭다운 메뉴 생성
+    function generateDropdownMenu() {
+      const dropdown = document.getElementById('dropdownMenu');
+      dropdown.innerHTML = '';
+
+      weekData.forEach((week, weekIndex) => {
+        // 1관
+        const item1 = document.createElement('div');
+        item1.className = 'dropdown-item';
+        if (weekIndex === currentWeekIndex && currentHall === 'hall1') {
+          item1.classList.add('active');
+        }
+        item1.innerHTML = `<span>${week.period}</span><span>1관</span>`;
+        item1.onclick = () => selectWeekHall(weekIndex, 'hall1');
+        dropdown.appendChild(item1);
+
+        // 2관
+        const item2 = document.createElement('div');
+        item2.className = 'dropdown-item';
+        if (weekIndex === currentWeekIndex && currentHall === 'hall2') {
+          item2.classList.add('active');
+        }
+        item2.innerHTML = `<span>${week.period}</span><span>2관</span>`;
+        item2.onclick = () => selectWeekHall(weekIndex, 'hall2');
+        dropdown.appendChild(item2);
+      });
+    }
+
+    // 드롭다운에서 주간/관 선택
+    function selectWeekHall(weekIndex, hall) {
+      currentWeekIndex = weekIndex;
+      currentHall = hall;
+      currentDateIndex = 0;
+      
+      changeWeek(weekIndex);
+      updateDropdownActive();
+      closeDropdown();
+    }
+
+    // 드롭다운 활성 상태 업데이트
+    function updateDropdownActive() {
+      const items = document.querySelectorAll('.dropdown-item');
+      items.forEach((item, index) => {
+        item.classList.remove('active');
+        const itemWeekIndex = Math.floor(index / 2);
+        const itemHall = index % 2 === 0 ? 'hall1' : 'hall2';
+        
+        if (itemWeekIndex === currentWeekIndex && itemHall === currentHall) {
+          item.classList.add('active');
+        }
+      });
+    }
+
+    // 주간 변경
+    function changeWeek(weekIndex) {
+      currentWeekIndex = weekIndex;
+      const currentWeek = weekData[weekIndex];
+      
+      // 주간 표시 업데이트
+      document.getElementById('currentWeekDisplay').textContent = currentWeek.period;
+      
+      // 일간 메뉴 생성
+      generateDailyMenu(currentWeek);
+      
+      // 날짜 섹션 생성
+      generateDateSections(currentWeek);
+      
+      // 첫 번째 날짜 활성화
+      showDateSection(0);
+      
+      // 드롭다운 활성 상태 업데이트
+      updateDropdownActive();
+    }
+
+    // 일간 메뉴 생성
+    function generateDailyMenu(week) {
+      const dailyMenu = document.getElementById('dailyMenu');
+      dailyMenu.innerHTML = '';
+
+      week.dates.forEach((date, index) => {
+        const item = document.createElement('div');
+        item.className = 'daily-item';
+        if (index === currentDateIndex) {
+          item.classList.add('active');
+        }
+        
+        item.innerHTML = `
+          <div class="daily-number">${date.number}</div>
+          <div class="daily-day">${date.day}</div>
+        `;
+        
+        item.onclick = () => showDateSection(index);
+        dailyMenu.appendChild(item);
+      });
+    }
+
+    // 날짜 섹션 생성
+    function generateDateSections(week) {
+      const container = document.getElementById('dateSections');
+      container.innerHTML = '';
+
+      week.dates.forEach((date, index) => {
+        const section = document.createElement('section');
+        section.className = 'date-section';
+        section.id = `section-${week.id}-${date.id}`;
+        
+        const movies = week.movies[date.id] ? week.movies[date.id][currentHall] : [];
+        
+        section.innerHTML = `
+          <div class="date">
+            <h3>${date.fullDate}</h3>
+            <p>${date.day}</p>
+          </div>
+          <div class="inventory-wrap">
+            ${movies.length > 0 ? 
+              movies.map(movie => `
+                <div class="movie-item">
+                  <div class="movie-poster">${movie.title}</div>
+                  <div class="movie-info">
+                    <div class="movie-title">${movie.title}</div>
+                    <div class="movie-time">${movie.time}</div>
+                    <div class="movie-hall">${currentHall === 'hall1' ? '1관' : '2관'}</div>
+                  </div>
+                  <div class="movie-status"></div>
+                </div>
+              `).join('') 
+              : '<div class="empty-state">이 날짜에는 상영 예정인 영화가 없습니다.</div>'
+            }
+          </div>
+        `;
+        
+        container.appendChild(section);
+      });
+    }
+
+    // 날짜 섹션 표시
+    function showDateSection(dateIndex) {
+      currentDateIndex = dateIndex;
+      
+      // 모든 섹션 숨기기
+      document.querySelectorAll('.date-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      
+      // 선택한 섹션 표시
+      const currentWeek = weekData[currentWeekIndex];
+      const targetSectionId = `section-${currentWeek.id}-${currentWeek.dates[dateIndex].id}`;
+      const targetSection = document.getElementById(targetSectionId);
+      if (targetSection) {
+        targetSection.classList.add('active');
+      }
+      
+      // 일간 메뉴 활성 상태 업데이트
+      document.querySelectorAll('.daily-item').forEach((item, index) => {
+        item.classList.toggle('active', index === dateIndex);
+      });
+    }
+
+    // 이전/다음 주 (무한 순회)
+    function prevWeek() {
+      currentWeekIndex = (currentWeekIndex - 1 + weekData.length) % weekData.length;
+      currentDateIndex = 0;
+      changeWeek(currentWeekIndex);
+    }
+
+    function nextWeek() {
+      currentWeekIndex = (currentWeekIndex + 1) % weekData.length;
+      currentDateIndex = 0;
+      changeWeek(currentWeekIndex);
+    }
+
+    // 드롭다운 토글
+    function toggleDropdown() {
+      const dropdown = document.getElementById('dropdownMenu');
+      dropdown.classList.toggle('show');
+      
+      if (dropdown.classList.contains('show')) {
+        setTimeout(() => {
+          document.addEventListener('click', closeDropdownOnClickOutside);
+        }, 0);
+      }
+    }
+
+    function closeDropdown() {
+      document.getElementById('dropdownMenu').classList.remove('show');
+      document.removeEventListener('click', closeDropdownOnClickOutside);
+    }
+
+    function closeDropdownOnClickOutside(event) {
+      const dropdown = document.getElementById('dropdownMenu');
+      const weeklyMenu = document.querySelector('.weekly-menu');
+      
+      if (!weeklyMenu.contains(event.target)) {
+        closeDropdown();
+      }
+    }
+
+    // 키보드 네비게이션
+    document.addEventListener('keydown', function(e) {
+      const currentWeek = weekData[currentWeekIndex];
+      
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        currentDateIndex = (currentDateIndex - 1 + currentWeek.dates.length) % currentWeek.dates.length;
+        showDateSection(currentDateIndex);
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        currentDateIndex = (currentDateIndex + 1) % currentWeek.dates.length;
+        showDateSection(currentDateIndex);
+      }
+    });
+
+    // 터치 스와이프 지원
+    let startX = 0;
+    let startY = 0;
+
+    document.addEventListener('touchstart', function(e) {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+    });
+
+    document.addEventListener('touchend', function(e) {
+      if (!startX || !startY) return;
+      
+      const endX = e.changedTouches[0].clientX;
+      const endY = e.changedTouches[0].clientY;
+      
+      const diffX = startX - endX;
+      const diffY = startY - endY;
+      
+      // 수평 스와이프가 수직 스와이프보다 클 때만 처리
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+        const currentWeek = weekData[currentWeekIndex];
+        
+        if (diffX > 0) {
+          // 왼쪽으로 스와이프 (다음 날짜)
+          currentDateIndex = (currentDateIndex + 1) % currentWeek.dates.length;
+          showDateSection(currentDateIndex);
+        } else {
+          // 오른쪽으로 스와이프 (이전 날짜)
+          currentDateIndex = (currentDateIndex - 1 + currentWeek.dates.length) % currentWeek.dates.length;
+          showDateSection(currentDateIndex);
+        }
+      }
+      
+      startX = 0;
+      startY = 0;
+    });
+
+    // 페이지 로드시 초기화
+    document.addEventListener('DOMContentLoaded', function() {
+      init();
+    });
+
+    // 초기화가 안 될 경우를 대비한 fallback
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  </script> -->
+
+  <!-- <script>
+    // 주간 데이터
+    const weeks = [
+      '06. 12 ~ 06. 18',
+      '06. 05 ~ 06. 11',
+      '05. 29 ~ 06. 04',
+      '05. 22 ~ 05. 28'
+    ];
+    
+    let currentWeekIndex = 0;
+    
+    // 섹션 데이터 (각 주에 해당하는 섹션들)
+    const weekSections = {
+      0: ['section-12', 'section-13', 'section-14', 'section-15', 'section-16', 'section-17', 'section-18'],
+      1: ['section-05', 'section-06', 'section-07', 'section-08', 'section-09', 'section-10', 'section-11'],
+      2: ['section-29', 'section-30', 'section-31', 'section-01', 'section-02', 'section-03', 'section-04'],
+      3: ['section-22', 'section-23', 'section-24', 'section-25', 'section-26', 'section-27', 'section-28']
+    };
+    
+    let currentSections = weekSections[0];
+    let currentSectionIndex = 0;
+
+    // 드롭다운 토글
+    function toggleDropdown() {
+      const dropdown = document.getElementById('dropdownMenu');
+      dropdown.classList.toggle('show');
+      
+      // 다른 곳 클릭시 드롭다운 닫기
+      setTimeout(() => {
+        document.addEventListener('click', closeDropdownOnClickOutside);
+      }, 0);
+    }
+
+    function closeDropdownOnClickOutside(event) {
+      const dropdown = document.getElementById('dropdownMenu');
+      const weeklyMenu = document.querySelector('.weekly-menu');
+      
+      if (!weeklyMenu.contains(event.target)) {
+        dropdown.classList.remove('show');
+        document.removeEventListener('click', closeDropdownOnClickOutside);
+      }
+    }
+
+    // 드롭다운 아이템 클릭
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+      item.addEventListener('click', function() {
+        // 활성 상태 업데이트
+        document.querySelectorAll('.dropdown-item').forEach(i => i.classList.remove('active'));
+        this.classList.add('active');
+        
+        // 선택된 주로 이동
+        const weekIndex = parseInt(this.dataset.week);
+        currentWeekIndex = weekIndex;
+        updateWeekDisplay();
+        updateSections();
+        
+        // 드롭다운 닫기
+        document.getElementById('dropdownMenu').classList.remove('show');
+      });
+    });
+
+    // 이전/다음 주
+    function prevWeek() {
+      currentWeekIndex = (currentWeekIndex - 1 + weeks.length) % weeks.length;
+      updateWeekDisplay();
+      updateSections();
+    }
+
+    function nextWeek() {
+      currentWeekIndex = (currentWeekIndex + 1) % weeks.length;
+      updateWeekDisplay();
+      updateSections();
+    }
+
+    // 주 표시 업데이트
+    function updateWeekDisplay() {
+      document.getElementById('currentWeek').textContent = weeks[currentWeekIndex];
+    }
+
+    // 섹션 업데이트
+    function updateSections() {
+      currentSections = weekSections[currentWeekIndex] || weekSections[0];
+      currentSectionIndex = 0;
+      
+      // 모든 섹션 숨기고 첫 번째 섹션만 표시
+      document.querySelectorAll('.date-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      
+      const firstSection = document.getElementById(currentSections[0]);
+      if (firstSection) {
+        firstSection.classList.add('active');
+      }
+      
+      // 일간 메뉴 활성 상태 업데이트
+      updateDailyMenuActive();
+    }
+
+    // 일간 메뉴 활성 상태 업데이트
+    function updateDailyMenuActive() {
+      document.querySelectorAll('.daily-item').forEach((item, index) => {
+        item.classList.toggle('active', index === currentSectionIndex);
+      });
+    }
+
+    // 날짜 섹션 표시
+    function showDateSection(sectionId) {
+      // 현재 섹션에서 해당 섹션의 인덱스 찾기
+      const sectionIndex = currentSections.indexOf(sectionId);
+      if (sectionIndex !== -1) {
+        currentSectionIndex = sectionIndex;
+      }
+      
+      // 모든 섹션 숨기기
+      document.querySelectorAll('.date-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      
+      // 선택한 섹션 표시
+      const targetSection = document.getElementById(sectionId);
+      if (targetSection) {
+        targetSection.classList.add('active');
+      }
+      
+      // 일간 메뉴 활성 상태 업데이트
+      updateDailyMenuActive();
+    }
+
+    // 키보드 네비게이션
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        currentSectionIndex = (currentSectionIndex - 1 + currentSections.length) % currentSections.length;
+        showDateSection(currentSections[currentSectionIndex]);
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        currentSectionIndex = (currentSectionIndex + 1) % currentSections.length;
+        showDateSection(currentSections[currentSectionIndex]);
+      }
+    });
+
+    // 터치 스와이프 지원
+    let startX = 0;
+    let startY = 0;
+
+    document.addEventListener('touchstart', function(e) {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+    });
+
+    document.addEventListener('touchend', function(e) {
+      if (!startX || !startY) return;
+      
+      const endX = e.changedTouches[0].clientX;
+      const endY = e.changedTouches[0].clientY;
+      
+      const diffX = startX - endX;
+      const diffY = startY - endY;
+      
+      // 수평 스와이프가 수직 스와이프보다 클 때만 처리
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+        if (diffX > 0) {
+          // 왼쪽으로 스와이프 (다음 섹션)
+          currentSectionIndex = (currentSectionIndex + 1) % currentSections.length;
+          showDateSection(currentSections[currentSectionIndex]);
+        } else {
+          // 오른쪽으로 스와이프 (이전 섹션)
+          currentSectionIndex = (currentSectionIndex - 1 + currentSections.length) % currentSections.length;
+          showDateSection(currentSections[currentSectionIndex]);
+        }
+      }
+      
+      startX = 0;
+      startY = 0;
+    });
+
+    // 초기 설정
+    updateDailyMenuActive();
+  </script> -->
+</body>
+</html>

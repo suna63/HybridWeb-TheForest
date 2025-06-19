@@ -1,0 +1,97 @@
+/* ___서브 비주얼___ */
+.full{
+  background-color: var(--background);
+}
+.max-title{
+  text-align: center;
+  background: #fff;
+  border-radius: 0 0 0 50px;
+  padding: 50px 20px;
+}
+
+.max-title h4{
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+
+/* ___컨텐츠___ */
+
+/* 영화 섹션 */
+.movie-wrap{
+  background-color: var(--background);
+  border-radius: 0 50px 0 0;
+  padding: 50px 20px;
+}
+
+.movie-article:first-child{
+  margin-bottom: 50px;
+}
+
+.article-title {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.movie-grid {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.movie-grid:active {
+  cursor: grabbing;
+}
+
+.movie-grid::-webkit-scrollbar {
+  height: 4px;
+}
+
+.movie-grid::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 2px;
+}
+
+.movie-grid::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 2px;
+}
+
+.movie-grid::-webkit-scrollbar-thumb:hover{
+  background: #a1a1a1;
+}
+
+.movie-item {
+  flex: 0 0 auto;
+  width: 120px;
+  text-align: center;
+}
+
+.movie-poster {
+  width: 120px;
+  height: auto;
+  border-radius: var(--radius);
+  /* background: #e0e0e0; */
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 8px;
+}
+
+.movie-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.movie-subtitle {
+  font-size: 12px;
+  color: var(--gray);
+}

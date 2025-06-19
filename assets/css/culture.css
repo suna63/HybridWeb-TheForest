@@ -1,0 +1,115 @@
+.culture main{
+  background-color: var(--background);
+}
+.culture section{
+  margin: 10px 0;
+}
+.culture .visu-title{
+  background-color: #fff;
+}
+
+/* 큰 카드 */
+.max-card{
+  background-color: #fff;
+  width: 100%;
+}
+.max-card img{
+  height: 320px;
+  object-fit: cover;
+}
+.max-txt{
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  gap: 20px;
+  width: 100%;
+}
+.max-txt span{
+  font-size: 15px;
+  color: var(--gray);
+}
+.max-txt p{
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+
+/* 더숲패키지 */
+.package{
+  background-color: #fff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.package-set{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.package-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  text-align: center;
+  height: 135px;
+}
+.package-img{
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.package-item p{
+  font-size: 14px;
+  color: var(--gray);
+  margin-top: 5px;
+}
+.package-txt{
+  color: var(--gray);
+}
+.package-txt strong{
+  font-size: 20px;
+  color: var(--black);
+}
+
+/* 중간카드 */
+.swiper.mySwiper{
+  padding: 30px 20px;
+  overflow: visible;
+  background-color: #fff;
+
+}
+.program-card{
+  width: 250px;
+  flex-shrink: 0;
+}
+.program-img{
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+}
+.program-text{
+  width: 250px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.program-text h6{
+  height: 40px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.program-text p{
+  font-size: 15px;
+  color: var(--gray);
+}

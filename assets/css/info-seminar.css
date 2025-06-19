@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+/* main-desc 섹션은 info-deosup.css에 */
+
+/* icons섹션부터 시작 */
+#seminar h4{
+  margin-bottom: 20px;
+}
+#seminar .icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#seminar .icons .icon{
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#seminar .icons .icon p{
+  height: 40px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--gray);
+}
+#seminar .icons .icon img{
+  width: 64px;
+}
+
+
+/* room-info 섹션 */
+#seminar .room-info{
+  display: flex;
+  flex-direction: column;
+  /* gap: 20px; */
+}
+#seminar .room-info .swiper{
+  overflow: hidden;
+}
+#seminar .room-info .swiper-wrapper{
+  display: flex;
+}
+#seminar .room-info img{
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: var(--radius);
+}
+#seminar .room-info .room-text{
+  padding: 20px 10px;
+}
+#seminar .room-info .room-text h6{
+  margin-bottom: 20px;
+}
+#seminar .room-info .room-text p{
+  color: var(--gray);
+}
+
+#seminar .room-info ul{
+  padding-left: 20px;
+  list-style-type: disc;
+  color: var(--gray);
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 150%;
+}
+
+
+
+/* rules 섹션 */
+#seminar .rules{
+  background-color: var(--background);
+}
+
+#seminar .rules ul{
+  padding-left: 20px;
+  list-style-type: disc;
+  color: var(--gray);
+  font-weight: normal;
+  line-height: 150%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

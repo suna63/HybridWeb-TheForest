@@ -1,0 +1,66 @@
+.recommended-wrap h3{
+  font-weight: 700;
+}
+
+/* movie-item */
+.movie-item{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.movie-poster{
+  width: 200px;
+  height: auto;
+}
+
+.movie-information img{
+  width: 25px;
+}
+.movie-information{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.movie-information h4{
+  font-weight: 700;
+}
+.movie-information h4 span{
+  font-weight: 500;
+  font-size: 14px;
+}
+.telegram{
+  font-size: 14px;
+  line-height: 1.5;
+}
+.reservation-rate{
+  display: block;
+  text-align: center;
+  width: 140px;
+  height: 42px;
+  line-height: 42px;
+  font-size: 16px;
+  border-radius: var(--radius);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+.reservation-rate span{
+  color: rgb(0, 174, 255);
+}
+
+
+a.btn{
+  width: 140px;
+  margin: 0;
+}
+
+/* story */
+.story{
+  margin-top: 20px;
+}
+.story h4{
+  font-weight: 700;
+}
+.story p{
+  line-height: 1.5;
+}

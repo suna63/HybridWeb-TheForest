@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시간표</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/movie-calendar.css">
+
+</head>
+<body>
+  <header>
+    <div class="main-menu">
+      <button onclick="history.back()" class="back">
+        <img src="/assets/image/back.png" alt="뒤로가기">
+      </button>
+      <a class="logo" href="index.html">
+        <img src="assets/image/logo-w.png" alt="로고">
+      </a>
+      <p>
+        <img src="/assets/image/gotolink.png" alt="">
+      </p>
+    </div>
+    <div class="sub-menu">
+      <div class="nav">
+        <img src="/assets/image/icon_house2.png" alt="홈">
+        <span></span>
+        영화생활
+      </div>
+      <div class="menu">
+        <a href="movie-calendar.html" class="active">시간표</a>
+        <a href="movie-rental.html">대관문의</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 서브 비주얼 -->
+    <section class="full">
+      <div class="sub-visu">
+        <img src="assets/image/movie-bg1.png" alt="서브비주얼">
+        <div class="max-title">
+          <h4>
+            스크린 속 깊은 감동과 여운이 가득한 시간<br>
+            더숲에서 영화와 함께하는<br>
+            특별한 순간에 초대합니다
+          </h4>
+          <a href="movie-timetable.html" class="btn">
+            영화 시간표
+          </a>
+          <p>
+            영화 상영 시간표는 <b>매주 화요일 업데이트</b>됩니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 컨텐츠 래퍼 -->
+    <section class="movie-wrap">
+      <!-- 추천 영화 섹션 -->
+      <article class="movie-article">
+        <h3 class="article-title">추천 영화</h3>
+        <div class="movie-grid" id="recommendedMovies">
+          <a href="movie-recommended.html">
+            <div class="movie-item">
+              <div class="movie-poster">
+                <img src="assets/image/movie-happyend.jpg" alt="영화포스터">
+              </div>
+              <div class="movie-title">해피엔드</div>
+              <div class="movie-subtitle">Happyend</div>
+            </div>
+          </a>
+          <a href="movie-recommended.html">
+            <div class="movie-item">
+              <div class="movie-poster">
+                <img src="assets/image/movie-the-seed.jpg" alt="영화포스터">
+              </div>
+              <div class="movie-title">신성한 나무의 씨앗</div>
+              <div class="movie-subtitle">The Seed of the Sacred Fig</div>
+            </div>
+          </a>
+          <a href="movie-recommended.html">
+            <div class="movie-item">
+              <div class="movie-poster">
+                <img src="assets/image/movie-ernest.jpg" alt="영화포스터">
+              </div>
+              <div class="movie-title">어네스트와 셀레스틴: 멜로디 소동</div>
+              <div class="movie-subtitle">Ernest & Celestine: A Trip to Gibberitia</div>
+            </div>
+          </a>
+          <a href="movie-recommended.html">
+            <div class="movie-item">
+              <div class="movie-poster">
+                <img src="assets/image/movie-swing.jpg" alt="영화포스터">
+              </div>
+              <div class="movie-title">스윙걸즈</div>
+              <div class="movie-subtitle">Swing Girls</div>
+            </div>
+          </a>
+          <a href="movie-recommended.html">
+            <div class="movie-item">
+              <div class="movie-poster">
+                <img src="assets/image/movie-life.jpg" alt="영화포스터">
+              </div>
+              <div class="movie-title">인생은 아름다워 (1997)</div>
+              <div class="movie-subtitle">Life Is Beautiful</div>
+            </div>
+          </a>
+        </div>
+      </article>
+
+      <!-- 상영 영화 섹션 -->
+      <article class="movie-article">
+        <h3 class="article-title">상영 영화</h3>
+        <div class="movie-grid" id="currentMovies">
+          <div class="movie-item">
+            <div class="movie-poster">
+              <img src="assets/image/movie-no-bears.jpg" alt="영화포스터">
+            </div>
+            <div class="movie-title">노 베어스</div>
+            <div class="movie-subtitle">No Bears</div>
+          </div>
+          <div class="movie-item">
+            <div class="movie-poster">
+              <img src="assets/image/movie-quiet-girl.jpg" alt="영화포스터">
+            </div>
+            <div class="movie-title">말없는 소녀</div>
+            <div class="movie-subtitle">The Quiet Girl</div>
+          </div>
+          <div class="movie-item">
+            <div class="movie-poster">
+              <img src="assets/image/movie-miyazaki.jpg" alt="영화포스터">
+            </div>
+            <div class="movie-title">미야자키 하야오: 자연의 영혼</div>
+            <div class="movie-subtitle">Miyazaki: Spirit of Nature</div>
+          </div>
+          <div class="movie-item">
+            <div class="movie-poster">
+              <img src="assets/image/movie-queer.jpg" alt="영화포스터">
+            </div>
+            <div class="movie-title">퀴어</div>
+            <div class="movie-subtitle">Queer</div>
+          </div>
+          <div class="movie-item">
+            <div class="movie-poster">
+              <img src="assets/image/movie-monet.jpg" alt="영화포스터">
+            </div>
+            <div class="movie-title">모네의 수련. 물과 빛의 마법</div>
+            <div class="movie-subtitle">The Water Lilies by Monet: The Magic of Water and Light</div>
+          </div>
+          <div class="movie-item">
+            <div class="movie-poster">
+              <img src="assets/image/movie-sea-tiger.jpg" alt="영화포스터">
+            </div>
+            <div class="movie-title">바다호랑이</div>
+            <div class="movie-subtitle">Sea Tiger</div>
+          </div>
+          <div class="movie-item">
+            <div class="movie-poster">
+              <img src="assets/image/movie-abroad.jpg" alt="영화포스터">
+            </div>
+            <div class="movie-title">어브로드</div>
+            <div class="movie-subtitle">ABROAD</div>
+          </div>
+          <div class="movie-item">
+            <div class="movie-poster">
+              <img src="assets/image/movie-sugar-glass.jpg" alt="영화포스터">
+            </div>
+            <div class="movie-title">슈가 글라스 보틀</div>
+            <div class="movie-subtitle">Sugar Glass Bottle</div>
+          </div>
+          <div class="movie-item">
+            <div class="movie-poster">
+              <img src="assets/image/movie-small-fry.jpg" alt="영화포스터">
+            </div>
+            <div class="movie-title">잔챙이</div>
+            <div class="movie-subtitle">Small Fry</div>
+          </div>
+          <div class="movie-item">
+            <div class="movie-poster">
+              <img src="assets/image/movie-güle.jpg" alt="영화포스터">
+            </div>
+            <div class="movie-title">귤레귤레</div>
+            <div class="movie-subtitle">Güle-Güle</div>
+          </div>
+          <div class="movie-item">
+            <div class="movie-poster">
+              <img src="assets/image/movie-nausicaa.jpg" alt="영화포스터">
+            </div>
+            <div class="movie-title">바람계곡의 나우시카</div>
+            <div class="movie-subtitle">Nausicaa Of The Valley Of The Winds</div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <nav class="footer-nav">
+      <a href="culture-anyway.html" class="nav-item">
+        <div class="nav-icon">
+          <img src="assets/image/icon-culture.png" alt="문화생활">
+        </div>
+        <span>문화생활</span>
+      </a>
+      <a href="movie-calendar.html" class="nav-item active ">
+        <div class="nav-icon">
+          <img src="assets/image/icon-movie-active.png" alt="영화생활">
+        </div>
+        <span>영화생활</span>
+      </a>
+      <div style="width: 40px;"></div>
+      <a href="cafe-bakery.html" class="nav-item">
+        <div class="nav-icon">
+          <img src="assets/image/icon-cafe.png" alt="카페생활">
+        </div>
+        <span>카페생활</span>
+      </a>
+      <a href="info-map.html" class="nav-item">
+        <div class="nav-icon">
+          <img src="assets/image/icon-the-forest.png" alt="더숲안내">
+        </div>
+        <span>더숲안내</span>
+      </a>
+    </nav>
+    <div class="home-button">
+      <a href="index.html" class="nav-item">
+        <div class="nav-icon">
+          <img src="assets/image/icon-house.png" alt="홈">
+        </div>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    // 영화 그리드 마우스 휠 스크롤 기능
+    document.querySelectorAll('.movie-grid').forEach(grid => {
+    grid.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      grid.scrollLeft += e.deltaY;
+    });
+
+    // 마우스 드래그 스크롤 기능
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    grid.addEventListener('mousedown', (e) => {
+      isDown = true;
+      grid.style.cursor = 'grabbing';
+      startX = e.pageX - grid.offsetLeft;
+      scrollLeft = grid.scrollLeft;
+    });
+
+    grid.addEventListener('mouseleave', () => {
+      isDown = false;
+      grid.style.cursor = 'grab';
+    });
+
+    grid.addEventListener('mouseup', () => {
+      isDown = false;
+      grid.style.cursor = 'grab';
+    });
+
+    grid.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - grid.offsetLeft;
+        const walk = (x - startX) * 2;
+        grid.scrollLeft = scrollLeft - walk;
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+.full {
+  position: fixed;
+  width: 100%;
+  max-width: 428px;
+  top: 90px;
+  background: var(--white);
+  border-bottom: 1px solid var(--background);
+  z-index: 9;
+}
+
+/* 주간 메뉴 스타일 */
+.weekly-menu {
+  background: var(--primaryColor);
+  color: var(--white);
+  padding: 15px 20px;
+  position: relative;
+}
+
+.weekly-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.arrow-btn {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px;
+  transition: opacity 0.2s;
+}
+
+.arrow-btn:hover {
+  opacity: 0.7;
+}
+
+.weekly-text {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+/* 드롭다운 메뉴 */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  border: 1px solid var(--lightgray);
+  border-radius: 0 0 3px 3px;
+  box-shadow: var(--boxShadow);
+  z-index: 1000;
+  display: none;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-item {
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  color: var(--black);
+  font-size: 14px;
+  transition: background-color 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+
+.dropdown-item.active {
+  background-color: var(--primaryColor);
+  color: var(--white);
+}
+
+/* 기타 메뉴 */
+.etc-menu {
+  padding: 20px;
+  background: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.etc-menu a {
+  text-decoration: none;
+  color: var(--black);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.etc-menu a:first-child {
+  color: var(--primaryColor);
+}
+
+.etc-menu a:last-child {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* 일간 메뉴 */
+.daily-menu {
+  padding: 10px 20px;
+  background: var(--white);
+  display: flex;
+  justify-content: space-between;
+}
+
+.daily-item {
+  min-width: 35px;
+  height: 50px;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.daily-item.active {
+  background: var(--primaryColor);
+  color: var(--white);
+}
+
+.daily-item:not(.active) {
+  background: var(--background);
+  color: var(--gray);
+}
+
+.daily-item:hover:not(.active) {
+  background: var(--lightgray);
+}
+
+.daily-number {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.daily-day {
+  font-size: 10px;
+  margin-top: 2px;
+}
+
+/* 카테고리 안내 */
+.information-wrap{
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+.information-wrap p{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  color: var(--gray);
+  font-size: 14px;
+}
+.information-wrap img{
+  width: 20px;
+  margin-left: 5px;
+}
+
+.information-wrap .category{
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: 0 0 3px rgba(0,0,0,0.1);
+  padding: 10px 20px;
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  /* word-break: break-all; */
+  z-index: 2;
+}
+.information-wrap:hover .category {
+  opacity: 1;
+  visibility: visible;
+}
+.information-wrap .category p{
+  flex: 0 0 auto;
+  white-space: nowrap;
+  margin: 5px;
+}
+.information-wrap .category span{
+  margin-right: 5px;
+}
+
+/* 카테고리 색상 */
+.movie-status {
+  width: 8px;
+  height: 8px;
+  background: #4a90e2;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.movie-status.c1{background-color: #FF6666;} /* 조조 */
+.movie-status.c2{background-color: #6B6D68;} /* 종영 */
+.movie-status.c3{background-color: #F0B056;} /* 개봉 */
+.movie-status.c4{background-color: #3BAF46;} /* 관객 */
+.movie-status.c5{background-color: #01ACF1;} /* 홍상수 */
+.movie-status.c6{background-color: #ED008C;} /* 굿즈 */
+.movie-status.c7{background-color: #8B9BCF;} /* 장기상영 */
+
+
+/* 스크롤 가능한 컨텐츠 영역 */
+.scrollable-content {
+  margin-top: 277px;
+  padding-bottom: 100px;
+}
+
+/* 섹션 스타일 */
+.date-section {
+  padding: 0;
+  display: none;
+}
+
+.date-section.active {
+  display: block;
+}
+
+.date {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.date h3 {
+  color: var(--black);
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.date p {
+  color: var(--gray);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* 영화 목록 */
+.inventory-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.movie-item {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  background: var(--white);
+  border: 1px solid #eee;
+  border-radius: var(--radius, 8px);
+  transition: box-shadow 0.2s;
+  position: relative;
+}
+
+.movie-item:hover {
+  box-shadow: var(--boxShadow);
+}
+
+.movie-poster {
+  width: 85px;
+  height: 121px;
+  border-radius: var(--radius, 4px);
+  background: #4a90e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 12px;
+  text-align: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.movie-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movie-info {
+  flex: 1;
+}
+
+.movie-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--black);
+  margin-top: 10px;
+  line-height: 1.3;
+}
+
+.movie-sub-title{
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray);
+  margin-bottom: 15px;
+}
+
+.movie-time {
+  color: var(--black);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.movie-hall {
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+  color: var(--gray);
+  font-size: 12px;
+}
+
+/* 빈 상태 메시지 */
+.empty-state {
+  text-align: center;
+  color: var(--gray);
+  padding: 40px 20px;
+  font-size: 14px;
+}
+
+/* 스크롤바 숨기기 */
+.daily-menu::-webkit-scrollbar {
+  display: none;
+}
+
+/* 주간별 컨텐츠 숨기기 */
+.week-content {
+  display: none;
+}
+
+.week-content.active {
+  display: block;
+}

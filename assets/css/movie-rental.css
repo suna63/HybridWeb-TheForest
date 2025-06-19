@@ -1,0 +1,412 @@
+/* __서브비주얼__ */
+section.full{
+  background-color: var(--white);
+}
+
+h3{
+  font-weight: 700;
+}
+
+.max-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.max-title h3,
+.max-title p {
+  text-align: start;
+  width: 100%;
+}
+
+a.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black);
+  color: var(--white);
+  width: 180px;
+}
+
+a.btn img {
+  height: 18px;
+  width: auto;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+/* __컨테이너__ */
+h3.sub-title{
+  text-align: center;
+  font-weight: 700;
+}
+
+
+/* --대관 용도-- */
+.use-content{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.use-item{
+  background-color: #ffffff;
+  border-radius: var(--radius);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.mini-title{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: var(--white);
+  background: var(--primaryColor);
+  border-radius: var(--radius);
+  padding: 10px 20px;
+}
+
+.use-text{
+  padding: 20px;
+}
+
+.use-text p{
+  color: var(--gray);
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* --극장 재원-- */
+.finance-wrap {
+  width: 100%;
+}
+
+.finance-content .row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  justify-items: center;
+  align-items: start;
+}
+
+.finance-content .row:last-child {
+  grid-template-columns: 1fr;
+}
+
+.finance-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.finance-item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.finance-item p {
+  font-weight: 700;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.finance-item span {
+  font-size: 14px;
+  color: #333;
+  white-space: pre-line;
+}
+
+/* --대관료-- */
+.expense-wrap{
+  background: var(--background);
+}
+
+.expense-item{
+  margin-bottom: 50px;
+}
+
+table caption{
+  font-weight: 700;
+  text-align: left;
+  margin: 0 0 10px 20px;
+}
+table{
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 30px;
+  background-color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--boxShadow);
+}
+table tr{
+  position: relative;
+}
+table tr:not(:last-of-type)::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, #888 0 50%, transparent 50% 100%);
+  background-size: 10px 5px;
+  background-repeat: repeat-x;
+}
+table th{
+  width: 100px;
+  line-height: 1.5;
+}
+table tr p{
+  font-size: 14px;
+  color: #333;
+}
+table td{
+  /* text-align: center; */
+  text-align: left;
+  line-height: 1.5;
+}
+
+.guide{
+  padding-bottom: 30px;
+}
+.guide p{
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* --대관 문의 신청-- */
+form{
+  margin: auto;
+}
+
+/* Input */
+.input-group {
+  margin-bottom: 25px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 8px;
+  padding: 0 5px;
+  pointer-events: none;
+}
+
+/* 필수 입력 필드 빨간 별표 */
+.input-group label.required::after {
+  content: ' *';
+  color: #e53935;
+  margin-left: 4px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="tel"],
+.input-group input[type="date"],
+.input-group input[type="time"],
+textarea {
+  width: 100%;
+  padding: 15px 15px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 15px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s ease;
+  background-color: #fff;
+}
+
+.input-group input[type="text"]:focus::placeholder,
+.input-group input[type="email"]:focus::placeholder,
+.input-group input[type="tel"]:focus::placeholder,
+.input-group textarea:focus::placeholder {
+  color: transparent;
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="email"]:focus,
+.input-group input[type="tel"]:focus,
+.input-group input[type="date"]:focus,
+.input-group input[type="time"]:focus,
+textarea:focus {
+  border-color: var(--primaryColor);
+}
+
+/* 전화번호 */
+.phone-group .phone-input-wrap,
+.birthday-group .birthday-input-wrap {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.phone-group select,
+.phone-group input[type="tel"],
+.birthday-group input[type="text"] {
+  padding: 15px 10px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 12px;
+  flex-grow: 1;
+  outline: none;
+  transition: border-color 0.3s ease;
+  color: #333;
+}
+
+.phone-group select {
+  flex-grow: 0;
+  padding-right: 25px;
+}
+
+.phone-group span {
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* 약관 동의 */
+.agreement-section {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: var(--radius);
+  background-color: #fdfdfd;
+}
+
+.agreement-all-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.agreement-all-wrap input[type="checkbox"] {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.agreement-divider {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 15px 0;
+}
+
+.agreement-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.agreement-item input[type="checkbox"] {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.agreement-item label {
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+.agreement-item .required,
+.agreement-item .optional-text {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.agreement-item .required {
+  color: #e74c3c;
+}
+
+.agreement-item .optional-text {
+  color: #888;
+}
+
+.agreement-item .view-terms {
+  margin-left: auto;
+  color: #007bff;
+  text-decoration: underline;
+  font-size: 10px;
+}
+
+.agreement-item.optional {
+  color: #777;
+}
+
+/* 버튼*/
+.btn {
+  display: block;
+  text-align: center;
+  width: 388px;
+  height: 42px;
+  line-height: 42px;
+  font-size: 16px;
+  font-weight: normal;
+  border-radius: var(--radius);
+  color: #fff;
+  background-color: var(--primaryColor);
+  margin: 20px auto;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: #0a3a1f;
+}
+
+.datetime-input-wrap {
+  display: flex;
+  gap: 10px;
+}
+
+.input-group input[type="date"],
+.input-group input[type="time"] {
+  flex: 1;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* date, time input의 기본 아이콘 */
+.input-group input[type="date"]::-webkit-calendar-picker-indicator,
+.input-group input[type="time"]::-webkit-calendar-picker-indicator {
+  padding-right: 5px;
+  opacity: 1;
+  display: block;
+  cursor: pointer;
+}
+
+textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: var(--radius);
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  resize: vertical;
+  min-height: 120px;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+/* 플레이스홀더 텍스트 스타일 */
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;
+}

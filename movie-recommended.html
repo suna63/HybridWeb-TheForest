@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>추천 영화</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/movie-recommended.css">
+
+</head>
+<body>
+  <header>
+    <div class="main-menu">
+      <button onclick="history.back()" class="back">
+        <img src="/assets/image/back.png" alt="뒤로가기">
+      </button>
+      <a class="logo" href="index.html">
+        <img src="assets/image/logo-w.png" alt="로고">
+      </a>
+      <p>
+        <img src="/assets/image/gotolink.png" alt="">
+      </p>
+    </div>
+    <div class="sub-menu">
+      <div class="nav">
+        <img src="/assets/image/icon_house2.png" alt="홈">
+        <span></span>
+        영화생활
+      </div>
+      <div class="menu">
+        <a href="movie-calendar.html" class="active">시간표</a>
+        <a href="movie-rental.html">대관문의</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="recommended-wrap">
+      <h3>추천 영화</h3>
+
+      <div class="movie-item">
+        <div class="movie-poster">
+          <img src="assets/image/movie-happyend.jpg" alt="영화포스터">
+        </div>
+
+        <div class="movie-information">
+          <img src="assets/image/age-15.svg" alt="관람나이">
+          <h4 class="movie-title">해피엔드 <span>Happyend</span></h4>
+          <div class="telegram">
+            15세 이상 관람가 <br>
+            4월중 <br>
+            드라마, 독립예술 <br>
+            113분
+          </div>
+          <div class="reservation-rate">
+            예매율 <span>7.63%</span>
+          </div>
+          <a href="https://www.dtryx.com/reserve/movie.do?cgid=FE8EF4D2-F22D-4802-A39A-D58F23A29C1E" class="btn">
+            영화 예매
+          </a>
+        </div>
+      </div>
+
+      <div class="story">
+        <h4>줄거리</h4>
+        <p>
+          점멸등이 일렁이는 근미래의 도쿄. <br><br>
+          음악에 빠진 고등학생 ‘유타’와 ‘코우’는 친구들과 함께 자유로운 나날을 보낸다. <br><br>
+          동아리방을 찾아 늦은 밤 학교에 잠입한 그들은 교장 ‘나가이’의 고급 차량에 발칙한 장난을 치고, 분노한 학교는 AI 감시 체제를 도입한다. <br><br>
+          그날 이후 그들을 둘러싼 모든 것이 조금씩 달라지기 시작하는데…
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <nav class="footer-nav">
+      <a href="culture-anyway.html" class="nav-item">
+        <div class="nav-icon">
+          <img src="assets/image/icon-culture.png" alt="문화생활">
+        </div>
+        <span>문화생활</span>
+      </a>
+      <a href="movie-calendar.html" class="nav-item active ">
+        <div class="nav-icon">
+          <img src="assets/image/icon-movie-active.png" alt="영화생활">
+        </div>
+        <span>영화생활</span>
+      </a>
+      <div style="width: 40px;"></div>
+      <a href="cafe-bakery.html" class="nav-item">
+        <div class="nav-icon">
+          <img src="assets/image/icon-cafe.png" alt="카페생활">
+        </div>
+        <span>카페생활</span>
+      </a>
+      <a href="info-map.html" class="nav-item">
+        <div class="nav-icon">
+          <img src="assets/image/icon-the-forest.png" alt="더숲안내">
+        </div>
+        <span>더숲안내</span>
+      </a>
+    </nav>
+    <div class="home-button">
+      <a href="index.html" class="nav-item">
+        <div class="nav-icon">
+          <img src="assets/image/icon-house.png" alt="홈">
+        </div>
+      </a>
+    </div>
+  </footer>
+</body>
+</html>

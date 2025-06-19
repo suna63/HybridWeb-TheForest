@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대관문의</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/movie-rental.css">
+
+</head>
+<body>
+  <header>
+    <div class="main-menu">
+      <button onclick="history.back()" class="back">
+        <img src="/assets/image/back.png" alt="뒤로가기">
+      </button>
+      <a class="logo" href="index.html">
+        <img src="assets/image/logo-w.png" alt="로고">
+      </a>
+      <p>
+        <img src="/assets/image/gotolink.png" alt="">
+      </p>
+    </div>
+    <div class="sub-menu">
+      <div class="nav">
+        <img src="/assets/image/icon_house2.png" alt="홈">
+        <span></span>
+        영화생활
+      </div>
+      <div class="menu">
+        <a href="movie-calendar.html">시간표</a>
+        <a href="movie-rental.html" class="active">대관문의</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 서브 비주얼 -->
+    <section class="full">
+      <div class="sub-visu">
+        <img src="assets/image/movie-bg2.png" alt="서브비주얼">
+        <div class="max-title">
+          <h3>더숲 아트시네마는</h3>
+          <p>
+            1관(42석), 2관(40석) 총 2개관을 운영하며,<br>
+            영화 관람, 행사, 공간 대여 등의<br>
+            대관 신청을 상시 접수 받습니다.
+          </p>
+          <div class="now-btn">
+            <a href="#application" class="btn">
+              대관 신청 바로가기
+              <img src="assets/image/arrow-now.png" alt="화살표">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="use-wrap">
+      <div class="container">
+        <h3 class="sub-title">대관 용도</h3>
+        <div class="use-content">
+          <div class="use-item">
+            <img src="assets/image/use1.png" alt="시네마 이미지">
+            <p class="mini-title">상영 대관</p>
+            <div class="use-text">
+              <h3>
+                더숲아트시네마에서 상영 중인 <br>
+                영화에 한하여 관람 가능
+              </h3>
+              <p>* 배급사와 협의하여 수급이 허락된 작품상영이 가능할 수 있으니 문의 요망</p>
+            </div>
+          </div>
+          <div class="use-item">
+            <img src="assets/image/use2.png" alt="시네마 이미지">
+            <p class="mini-title">행사 대관</p>
+            <div class="use-text">
+              <h3>
+                더숲아트시네마에서 상영 중인 <br>
+                영화에 한하여 관람 가능
+              </h3>
+              <span>마이크(무선 1EA, 유선 3EA), 더숲 내 테이블, 의자 무상 제공 가능</span>
+              <p>* 단, 기자재 대여, 기술 지원 등은 추가 비용이 발생될 수 있어 사전 협의 요망수급이 허락된 작품상영이 가능할 수 있으니 문의 요망</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="finance-wrap">
+      <h3 class="sub-title">극장 재원</h3>
+      <div class="finance-content">
+        <div class="row">
+          <div class="finance-item">
+            <img src="assets/image/icon-chair.png" alt="좌석수">
+            <p>좌석수</p>
+            <span>1관 40석 / 2관 40석</span>
+          </div>
+          <div class="finance-item">
+            <img src="assets/image/icon-projector.png" alt="영사기">
+            <p>영사기</p>
+            <span>
+              Christie CP-2208 <br>
+              CP-2308
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="finance-item">
+            <img src="assets/image/icon-speaker.png" alt="음향">
+            <p>음향</p>
+            <span>
+              DCP-100 5.1채널 <br>
+              마이크 4대 <br>
+              (무선 1대, 유선 3대)
+            </span>
+          </div>
+          <div class="finance-item">
+            <img src="assets/image/icon-screen.png" alt="스크린 크기">
+            <p>스크린 크기</p>
+            <span>
+              1관 - 4M X 2.2M <br>
+              2관 - 4.35M X 2.35M
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="finance-item">
+            <img src="assets/image/icon-mike.png" alt="기타">
+            <p>기타</p>
+            <span>
+              프리젠테이션 / 스크린을 통한 노트북 활용 가능 <br>
+              (맥은 연동 불가 / 윈도우 기반의 노트북 필요)
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="expense-wrap">
+      <div class="container">
+        <h3 class="sub-title">대관료</h3>
+        <div class="expense-item">
+          <table class="weekday">
+            <caption>주중 (월~목)</caption>
+            <tr>
+              <th>영화 관람</th>
+              <td>360,000원<p>(1人 9,000원 *1석당 1천원 할인)</p></td>
+            </tr>
+            <tr>
+              <th>조조 영화 관람<p>(10:30 AM 이전)</p></th>
+              <td>280,000원<p>(1人 7,000원 *조조할인)</p></td>
+            </tr>
+            <tr>
+              <th>공간 대관<p>(2시간 기준)</p></th>
+              <td>360,000원 (V.A.T 별도)<p>*2시간 이상 대관 시 문의 요망</p></td>
+            </tr>
+          </table>
+        </div>
+        <div class="expense-item">
+          <table class="weekend">
+            <caption>주말 (금~일, 공휴일)</caption>
+            <tr>
+              <th>영화 관람</th>
+              <td>400,000원<p>(1人 10,000원 *1석당 1천원 할인)</p></td>
+            </tr>
+            <tr>
+              <th>조조 영화 관람<p>(11:00 AM 이전)</p></th>
+              <td>320,000원<p>(1人 8,000원 *조조할인)</p></td>
+            </tr>
+            <tr>
+              <th>공간 대관<p>(2시간 기준)</p></th>
+              <td>400,000원 (V.A.T 별도)</td>
+            </tr>
+          </table>
+        </div>
+        <div class="guide">
+          <p>
+            * 영화 관람의 경우 <b>2시간이</b> 넘는 작품의 경우 <b>대관료가 추가 발생</b>
+          </p>
+          <p>
+            * 공간 대관 시 <b>마이크, PT 등 활용 여부</b> 사전 협의 필수
+          </p>
+          <p>
+            * <b>세금계산서 발행 / 영수증 증빙 / 견적서</b> 등이 필요할 시 사전 요청
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="application">
+      <div class="container">
+        <h3 class="sub-title">대관 문의 신청</h3>
+        <form>
+          <div class="input-group name">
+            <label for="userName" class="required">이름</label>
+            <input type="text" id="userName" name="userName" required placeholder="이름을 입력해주세요.">
+          </div>
+
+          <div class="input-group group-name">
+            <label for="userGroup" class="required">단체명</label>
+            <input type="text" id="userGroup" name="userGroup" required placeholder="단체명을 입력해주세요.">
+          </div>
+
+          <div class="input-group phone-group">
+              <label for="phonePart1" class="required">연락처</label>
+              <div class="phone-input-wrap">
+                  <select id="phonePart1" name="phonePart1" required>
+                      <option value="" selected disabled>선택</option> <option value="010">010</option>
+                      <option value="011">011</option>
+                      </select>
+                  <span>-</span>
+                  <input type="tel" id="phonePart2" name="phonePart2" required maxlength="4" placeholder="1234">
+                  <span>-</span>
+                  <input type="tel" id="phonePart3" name="phonePart3" required maxlength="4" placeholder="5678">
+              </div>
+          </div>
+
+          <div class="input-group email">
+            <label for="userEmail" class="required">이메일</label>
+            <input type="email" id="userEmail" name="userEmail" required placeholder="이메일을 입력해주세요.">
+          </div>
+
+          <div class="input-group desire">
+            <label for="desiredDate" class="required">희망 대관 일시</label>
+            <div class="datetime-input-wrap">
+              <input type="date" id="desiredDate" name="desiredDate" value="2025-06-20">
+              <input type="time" id="desiredTime" name="desiredTime" placeholder="시/분">
+            </div>
+          </div>
+
+          <div class="input-group etc">
+            <label for="purpose" class="required">대관 목적 (간략히 설명 부탁드립니다)</label>
+            <textarea id="purpose" name="purpose" rows="8" placeholder="대관 목적을 입력해주세요."></textarea>
+          </div>
+          
+          <div class="agreement-section">
+            <div class="agreement-all-wrap">
+              <input type="checkbox" id="agreeAll" name="agreeAll">
+              <label for="agreeAll">약관 전체 동의</label>
+            </div>
+
+            <hr class="agreement-divider">
+            <div class="agreement-item">
+              <input type="checkbox" id="termsOfUse" name="termsOfUse" required>
+              <label for="termsOfUse">이용약관 동의 <span class="required-text">[필수]</span></label>
+              <a href="#none" class="view-terms">약관보기</a>
+            </div>
+            <div class="agreement-item">
+              <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
+              <label for="privacyPolicy">개인정보 수집 및 이용 동의 <span class="required-text">[필수]</span></label>
+              <a href="#none" class="view-terms">약관보기</a>
+            </div>
+            <div class="agreement-item optional">
+              <input type="checkbox" id="marketingSms" name="marketingSms">
+              <label for="marketingSms">예약정보 수신 동의 (SMS 수신) <span class="optional-text">[선택]</span></label>
+              <a href="#none" class="view-terms">약관보기</a>
+            </div>
+            <div class="agreement-item optional">
+              <input type="checkbox" id="marketingEmail" name="marketingEmail">
+              <label for="marketingEmail">예약정보 수신 동의 (이메일 수신) <span class="optional-text">[선택]</span></label>
+              <a href="#none" class="view-terms">약관보기</a>
+            </div>
+          </div>
+          <button type="submit" class="btn">작성</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <nav class="footer-nav">
+      <a href="culture-anyway.html" class="nav-item">
+        <div class="nav-icon">
+          <img src="assets/image/icon-culture.png" alt="문화생활">
+        </div>
+        <span>문화생활</span>
+      </a>
+      <a href="movie-calendar.html" class="nav-item active ">
+        <div class="nav-icon">
+          <img src="assets/image/icon-movie-active.png" alt="영화생활">
+        </div>
+        <span>영화생활</span>
+      </a>
+      <div style="width: 40px;"></div>
+      <a href="cafe-bakery.html" class="nav-item">
+        <div class="nav-icon">
+          <img src="assets/image/icon-cafe.png" alt="카페생활">
+        </div>
+        <span>카페생활</span>
+      </a>
+      <a href="info-map.html" class="nav-item">
+        <div class="nav-icon">
+          <img src="assets/image/icon-the-forest.png" alt="더숲안내">
+        </div>
+        <span>더숲안내</span>
+      </a>
+    </nav>
+    <div class="home-button">
+      <a href="index.html" class="nav-item">
+        <div class="nav-icon">
+          <img src="assets/image/icon-house.png" alt="홈">
+        </div>
+      </a>
+    </div>
+  </footer>
+
+  <!-- script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  function checkScroll() {
+    if (typeof $ === 'function') {
+      const scrollPosition = $(window).scrollTop();
+      const windowHeight = $(window).height();
+
+      $(".ani").each(function () {
+          const elementTop = $(this).offset().top;
+          if (elementTop < scrollPosition + windowHeight * 0.8) {
+              $(this).addClass("moving");
+          }
+      });
+    }
+  }
+
+  if (typeof $ === 'function') {
+    $(window).on("scroll", checkScroll);
+    checkScroll();
+  }
+
+  const agreeAllCheckbox = document.getElementById('agreeAll');
+  const termsOfUseCheckbox = document.getElementById('termsOfUse');
+  const privacyPolicyCheckbox = document.getElementById('privacyPolicy');
+  const marketingSmsCheckbox = document.getElementById('marketingSms');
+  const marketingEmailCheckbox = document.getElementById('marketingEmail');
+
+  const allIndividualCheckboxes = [
+      termsOfUseCheckbox,
+      privacyPolicyCheckbox,
+      marketingSmsCheckbox,
+      marketingEmailCheckbox
+  ].filter(checkbox => checkbox !== null);
+
+  if (allIndividualCheckboxes.length < 4) {
+      console.warn('일부 동의 체크박스 요소를 찾을 수 없습니다. HTML의 ID를 확인해주세요.');
+  }
+
+  // "전체 동의" 체크박스 이벤트 리스너
+  if (agreeAllCheckbox) {
+    agreeAllCheckbox.addEventListener('change', function() {
+        const isChecked = this.checked;
+        allIndividualCheckboxes.forEach(checkbox => {
+            checkbox.checked = isChecked;
+        });
+    });
+  } else {
+    console.error("'agreeAll' ID를 가진 체크박스를 찾을 수 없습니다.");
+  }
+
+  // 개별 동의 체크박스 이벤트 리스너 (전체 동의 상태 업데이트)
+  allIndividualCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', function() {
+        if (agreeAllCheckbox) {
+            const allChecked = allIndividualCheckboxes.every(cb => cb.checked);
+            agreeAllCheckbox.checked = allChecked;
+        }
+    });
+  });
+
+  // 폼 제출 시 필수 약관 동의 여부 확인
+  const joinForm = document.querySelector('form'); // 
+  if (joinForm) {
+    joinForm.addEventListener('submit', function(event) {
+      const essentialTerms = document.getElementById('termsOfUse');
+      const essentialPrivacy = document.getElementById('privacyPolicy');
+      
+      let essentialAgreed = true;
+
+      if (!essentialTerms || !essentialTerms.checked) {
+        essentialAgreed = false;
+      }
+      if (!essentialPrivacy || !essentialPrivacy.checked) {
+        essentialAgreed = false;
+      }
+
+      if (!essentialAgreed) {
+          alert('필수 약관에 모두 동의해야 회원가입을 진행할 수 있습니다.');
+          event.preventDefault();
+      }
+    });
+  } else {
+    console.error("회원가입 폼 요소를 찾을 수 없습니다.");
+  }
+});
+  </script>
+
+  <script>
+    // 현재 날짜를 YYYY-MM-DD 형식으로 반환하는 함수
+    function getCurrentDate() {
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = String(today.getMonth() + 1).padStart(2, '0');
+        const day = String(today.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const desiredDateField = document.getElementById('desiredDate');
+        if (desiredDateField) {
+            desiredDateField.value = getCurrentDate();
+        }
+    });
+  </script>
+</body>
+</html>

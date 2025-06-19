@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카페생활</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/cafe-food.css">
+</head>
+<body>
+  <header>
+    <div class="main-menu">
+      <button onclick="history.back()" class="back">
+        <img src="/assets/image/back.png" alt="뒤로가기">
+      </button>
+      <a class="logo" href="index.html">
+        <img src="assets/image/logo-w.png" alt="로고">
+      </a>
+      <p>
+        <img src="/assets/image/gotolink.png" alt="">
+      </p>
+    </div>
+    <div class="sub-menu">
+      <div class="nav">
+        <img src="/assets/image/icon_house2.png" alt="홈">
+        <span></span>
+        카페생활
+      </div>
+      <div class="menu">
+        <a href="cafe-bakery.html" class="active">베이커리</a>
+        <a href="cafe-coffee.html">카페</a>
+        <a href="cafe-food.html">식사</a>
+        <a href="cafe-wine.html">와인</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div id="bakery">
+    <div class="sub-visu">
+      <img src="assets/image/cafe/bakery/bakery.jpg" alt="베이커리">
+    </div>
+    <section class="cafe-section">
+      <div class="sub-title">
+        <h1>베이커리</h1>
+        <h3>유기농 밀가루, 천연발효종, 무방부제<br>
+        <b>20시 이후 구매시 빵 20% 할인</b></h3>
+        <h5>(쿠키/케이크류 제외)</h5>
+      </div>
+      <ul class="tab-button thrdepth">
+        <li data-alt="sandwich" class="active">샌드위치</li>
+        <li data-alt="bread">식빵</li>
+        <li data-alt="pang">빵</li>
+        <li data-alt="dessert">디저트</li>
+        <li data-alt="cookie">쿠키</li>
+        <li data-alt="cake">조각케이크</li>
+      </ul>
+      <div class="bakery food-container">
+        <!-- sandwich -->
+        <div id="sandwich" class="yummy-items active">
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/01.jpg" alt="BLT 샌드위치">
+            <div class="yummy-info">
+              <p>BLT 샌드위치</p>
+              <p>6,000</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/02.jpeg" alt="와사비 마요 샌드위치">
+            <div class="yummy-info">
+              <p>와사비 마요 샌드위치</p>
+              <p>6,500</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/03.jpg" alt="핫치킨 샌드위치">
+            <div class="yummy-info">
+              <p>핫치킨 샌드위치</p>
+              <p>6,300</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/04.jpg" alt="살라미햄 샌드위치">
+            <div class="yummy-info">
+              <p>살라미햄 샌드위치</p>
+              <p>6,000</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/05.jpg" alt="햄치즈 샌드위치">
+            <div class="yummy-info">
+              <p>햄치즈 샌드위치</p>
+              <p>5,500</p>
+            </div>
+          </div>
+        </div>
+        <!-- bread -->
+        <div id="bread" class="yummy-items">
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="우유식빵">
+            <div class="yummy-info">
+              <p>우유식빵</p>
+              <p>6,000</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="칠곡식빵">
+            <div class="yummy-info">
+              <p>칠곡식빵</p>
+              <p>6,000</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="치즈식빵">
+            <div class="yummy-info">
+              <p>치즈식빵</p>
+              <p>6,700</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="올리브식빵">
+            <div class="yummy-info">
+              <p>올리브식빵</p>
+              <p>6,500</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="통밀식빵">
+            <div class="yummy-info">
+              <p>100% 통밀식빵</p>
+              <p>6,700</p>
+            </div>
+          </div>
+        </div>
+        <!-- pang -->
+        <div id="pang" class="yummy-items">
+          <div class="yummy-item vegan">
+            <img src="assets/image/cafe/bakery/coming.png" alt="감자 치아바타">
+            <div class="yummy-info">
+              <p>감자 치아바타</p>
+              <p>4,200</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="호밀 공주밤 깜파뉴">
+            <div class="yummy-info">
+              <p>호밀 공주밤 깜파뉴</p>
+              <p>6,000</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="공주밤 브리오슈">
+            <div class="yummy-info">
+              <p>공주밤 브리오슈</p>
+              <p>5,500</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="단호박쌀빵">
+            <div class="yummy-info">
+              <p>단호박쌀빵</p>
+              <p>6,000</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="메이플번">
+            <div class="yummy-info">
+              <p>메이플번</p>
+              <p>3,800</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="통밀 무화과 깜파뉴">
+            <div class="yummy-info">
+              <p>통밀 무화과 깜파뉴</p>
+              <p>6,000</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="시오빵">
+            <div class="yummy-info">
+              <p>시오빵</p>
+              <p>3,500</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="쌀 쉬폰 케이크">
+            <div class="yummy-info">
+              <p>쌀 쉬폰 케이크</p>
+              <p>5,700</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="썬드라이 포카치아">
+            <div class="yummy-info">
+              <p>썬드라이 포카치아</p>
+              <p>5,700</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="쑥덕쑥덕">
+            <div class="yummy-info">
+              <p>쑥덕쑥덕</p>
+              <p>5,000</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="말차 스콘">
+            <div class="yummy-info">
+              <p>말차 스콘</p>
+              <p>3,700</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="크랜베리 스콘">
+            <div class="yummy-info">
+              <p>크랜베리 스콘</p>
+              <p>3,700</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="앙버터 바게트">
+            <div class="yummy-info">
+              <p>앙버터 바게트</p>
+              <p>5,300</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="옥수수 크림치즈">
+            <div class="yummy-info">
+              <p>옥수수 크림치즈</p>
+              <p>6,000</p>
+            </div>
+          </div>
+          <div class="yummy-item vegan">
+            <img src="assets/image/cafe/bakery/coming.png" alt="정통 프랑스 바게트">
+            <div class="yummy-info">
+              <p>정통 프랑스 바게트</p>
+              <p>4,000</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="초코 크랜베리">
+            <div class="yummy-info">
+              <p>초코 크랜베리</p>
+              <p>5,700</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="카야 바게트">
+            <div class="yummy-info">
+              <p>카야 바게트</p>
+              <p>5,300</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="콰트로 치즈">
+            <div class="yummy-info">
+              <p>콰트로 치즈</p>
+              <p>5,500</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="고메 버터 프레첼">
+            <div class="yummy-info">
+              <p>고메 버터 프레첼</p>
+              <p>4,500</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="앙버터 프레첼">
+            <div class="yummy-info">
+              <p>앙버터 프레첼</p>
+              <p>4,700</p>
+            </div>
+          </div>
+          <div class="yummy-item vegan">
+            <img src="assets/image/cafe/bakery/coming.png" alt="호밀 75%">
+            <div class="yummy-info">
+              <p>호밀 75%</p>
+              <p>8,000 (하프: 4,300)</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="흥국쌀 고구마">
+            <div class="yummy-info">
+              <p>흥국쌀 고구마</p>
+              <p>6,000</p>
+            </div>
+          </div>
+        </div>
+        <!-- dessert -->
+        <div id="dessert" class="yummy-items">
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="바닐라 까눌레">
+            <div class="yummy-info">
+              <p>바닐라 까눌레</p>
+              <p>2,700</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="말차 까눌레">
+            <div class="yummy-info">
+              <p>말차 까눌레</p>
+              <p>2,900</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="홍차 까눌레">
+            <div class="yummy-info">
+              <p>홍차 까눌레</p>
+              <p>2,900</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="에그타르트">
+            <div class="yummy-info">
+              <p>에그타르트</p>
+              <p>3,000</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="가나슈 에그타르트">
+            <div class="yummy-info">
+              <p>가나슈 에그타르트</p>
+              <p>3,200</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="크림 브륄레">
+            <div class="yummy-info">
+              <p>크림 브륄레</p>
+              <p>3,700</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="마롱 피낭시에">
+            <div class="yummy-info">
+              <p>마롱 피낭시에</p>
+              <p>3,300</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="무화과 피낭시에">
+            <div class="yummy-info">
+              <p>무화과 피낭시에</p>
+              <p>3,300</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="치즈 피낭시에">
+            <div class="yummy-info">
+              <p>치즈 피낭시에</p>
+              <p>3,300</p>
+            </div>
+          </div>
+        </div>
+        <!-- cookie -->
+        <div id="cookie" class="yummy-items">
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="아몬드 튀일">
+            <div class="yummy-info">
+              <p>아몬드 튀일</p>
+              <p>5,300</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="쇼콜라 프로켄트">
+            <div class="yummy-info">
+              <p>쇼콜라 프로켄트</p>
+              <p>5,300</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="마카룬 쿠키">
+            <div class="yummy-info">
+              <p>마카룬 쿠키</p>
+              <p>4,700</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="프레첼 머랭 쿠키">
+            <div class="yummy-info">
+              <p>프레첼 머랭 쿠키</p>
+              <p>4,700</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="민트 머랭 쿠키">
+            <div class="yummy-info">
+              <p>민트 머랭 쿠키</p>
+              <p>4,700</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="코코넛 쿠키">
+            <div class="yummy-info">
+              <p>코코넛 쿠키</p>
+              <p>4,000</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="우유 버터 러스크">
+            <div class="yummy-info">
+              <p>우유 버터 러스크</p>
+              <p>4,000</p>
+            </div>
+          </div>
+          <div class="yummy-item new">
+            <img src="assets/image/cafe/bakery/coming.png" alt="로투스 조리퐁 쫀득쿠키">
+            <div class="yummy-info">
+              <p>로투스 조리퐁 쫀득쿠키</p>
+              <p>5,200</p>
+            </div>
+          </div>
+          <div class="yummy-item new">
+            <img src="assets/image/cafe/bakery/coming.png" alt="후르츠링 쫀득쿠키">
+            <div class="yummy-info">
+              <p>후르츠링 쫀득쿠키</p>
+              <p>5,200</p>
+            </div>
+          </div>
+          <div class="yummy-item new">
+            <img src="assets/image/cafe/bakery/coming.png" alt="오레오 쫀득쿠키">
+            <div class="yummy-info">
+              <p>오레오 쫀득쿠키</p>
+              <p>5,200</p>
+            </div>
+          </div>
+        </div>
+        <!-- cake -->
+          <div id="cake" class="yummy-items">
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="쇼콜라 파운드">
+            <div class="yummy-info">
+              <p>쇼콜라 파운드</p>
+              <p>4,300</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="레몬 파운드">
+            <div class="yummy-info">
+              <p>레몬 파운드</p>
+              <p>4,300</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="단호박 쑥쇼콜라">
+            <div class="yummy-info">
+              <p>단호박 쑥쇼콜라</p>
+              <p>7,000</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="딸기 쉬폰">
+            <div class="yummy-info">
+              <p>딸기 쉬폰</p>
+              <p>6,700</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="초코 스퀘어 케이크">
+            <div class="yummy-info">
+              <p>초코 스퀘어 케이크</p>
+              <p>6,000</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="꿀밤 케이크">
+            <div class="yummy-info">
+              <p>꿀밤 케이크</p>
+              <p>6,700</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="오레오 우유 케이크">
+            <div class="yummy-info">
+              <p>오레오 우유 케이크</p>
+              <p>6,700</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="헤이즐넛 초콜릿">
+            <div class="yummy-info">
+              <p>헤이즐넛 초콜릿</p>
+              <p>6,700</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="스트로베리 크레이프">
+            <div class="yummy-info">
+              <p>스트로베리 크레이프</p>
+              <p>6,700</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="얼그레이 쉬폰 케이크">
+            <div class="yummy-info">
+              <p>얼그레이 쉬폰 케이크</p>
+              <p>6,700</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="얼그레이 가또 쇼콜라">
+            <div class="yummy-info">
+              <p>얼그레이 가또 쇼콜라</p>
+              <p>6,700</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="말차 가또 쇼콜라">
+            <div class="yummy-info">
+              <p>말차 가또 쇼콜라</p>
+              <p>6,700</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="한라봉 홍차 케이크">
+            <div class="yummy-info">
+              <p>한라봉 홍차 케이크</p>
+              <p>6,700</p>
+            </div>
+          </div>
+          <div class="yummy-item">
+            <img src="assets/image/cafe/bakery/coming.png" alt="뉴욕 치즈 타르트">
+            <div class="yummy-info">
+              <p>뉴욕 치즈 타르트</p>
+              <p>6,700</p>
+            </div>
+          </div>
+        </div>
+    </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <nav class="footer-nav">
+      <a href="culture-anyway.html" class="nav-item">
+        <div class="nav-icon">
+          <img src="assets/image/icon-culture.png" alt="문화생활">
+        </div>
+        <span>문화생활</span>
+      </a>
+      <a href="movie-calendar.html" class="nav-item">
+        <div class="nav-icon">
+          <img src="assets/image/icon-movie.png" alt="영화생활">
+        </div>
+        <span>영화생활</span>
+      </a>
+      <div style="width: 40px;"></div>
+      <a href="cafe-bakery.html" class="nav-item active">
+        <div class="nav-icon">
+          <img src="assets/image/icon-cafe-active.png" alt="카페생활">
+        </div>
+        <span>카페생활</span>
+      </a>
+      <a href="info-map.html" class="nav-item">
+        <div class="nav-icon">
+          <img src="assets/image/icon-the-forest.png" alt="더숲안내">
+        </div>
+        <span>더숲안내</span>
+      </a>
+    </nav>
+    <div class="home-button">
+      <a href="index.html" class="nav-item">
+        <div class="nav-icon">
+          <img src="assets/image/icon-house.png" alt="홈">
+        </div>
+      </a>
+    </div>
+  </footer> 
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/jquery-ui-1.10.4.custom.min.js"></script>
+<script src="assets/js/cafe-food.js"></script>
+</body>
+</html>

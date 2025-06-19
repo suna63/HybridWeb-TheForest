@@ -1,0 +1,136 @@
+/* 마진/패딩 조절 */
+.landing section.full {
+  margin: 0;
+}
+.landing main{
+  margin-top: 45px;
+}
+.landing section:last-child{
+  background-color: var(--background);
+}
+
+/* 상세페이지 비주얼 */
+.landing-title h4{
+  background-color: var(--background);
+  font-weight: 700;
+  padding: 40px 0 20px 20px;
+  margin: 0px;
+}
+.landing-card{
+  position: relative;
+  width: 100%;
+  height: 555px;
+}
+.landing-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 555px;
+  overflow: hidden;
+}
+.landing-img img{
+  object-fit: cover;
+}
+
+.landing-txt{
+  background-color: #fff;
+  border-radius: 20px 20px 0 0;
+  padding: 30px 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.landing-txt h6{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.landing-txt p{
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.landing-info{
+  padding: 30px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+}
+.landing-item{
+  font-weight: 400;
+  margin-top: 20px;
+}
+.landing-item span{
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--gray);
+}
+
+/* 이달의 책갈피 */
+.bookmark{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+.bookmark-img{
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.bookmark-img img{
+  box-shadow: var(--boxShadow);
+}
+.bookmark-txt{
+  text-align: center;
+  margin-top: 20px;
+}
+.bookmark-txt p{
+  font-size: 14px;
+  color: var(--gray);
+  margin-top: 5px;
+}
+
+/* 이달의 도서 */
+.book-set{
+  padding: 20px;
+}
+.book-item{
+  display: flex;
+  margin: 20px;
+}
+.book-item img{
+  width: 100px;
+}
+.book-txt{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  text-align: center;
+  margin-left: 30px;
+}
+.book-txt span{
+  font-size: 14px;
+  color: var(--gray);
+  margin-top: 10px;
+}
+.book-txt span:nth-child(2){
+  margin-top: 20px;
+}
+
+/* 공지사항 */
+.notice{
+  padding: 20px 40px 50px 40px;
+  color: var(--gray);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+  list-style-type: circle;
+}
+
+

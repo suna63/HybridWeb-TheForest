@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+#info section.full{
+  background-color: var(--white);
+}
+
+
+#info .cards{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+#info .card{
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+#info .card::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+#info .card img{
+  display: block;
+  height: 200px;
+  object-fit: cover;
+  
+}
+#info .card .desc{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+#info .card .desc h4{
+  font-weight: 600;
+  color: var(--white);
+}
+#info .card .desc p{
+  color: var(--background);
+}
+
+#info .card .desc a.btn{
+  display: inline-block;
+  width: fit-content;
+  color: var(--white);
+  background-color: transparent;
+  border: 1px solid var(--white);
+  padding: 0 20px;
+  margin: 20px auto 0;
+}
+#info .card .desc a.btn:hover{
+  background: var(--white);
+  color: var(--primaryColor);
+  border: 1px solid var(--primaryColor);
+  
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카페생활</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/cafe-food.css">
+</head>
+<body>
+  <header>
+    <div class="main-menu">
+      <button onclick="history.back()" class="back">
+        <img src="/assets/image/back.png" alt="뒤로가기">
+      </button>
+      <a class="logo" href="index.html">
+        <img src="assets/image/logo-w.png" alt="로고">
+      </a>
+      <p>
+        <img src="/assets/image/gotolink.png" alt="">
+      </p>
+    </div>
+    <div class="sub-menu">
+      <div class="nav">
+        <img src="/assets/image/icon_house2.png" alt="홈">
+        <span></span>
+        카페생활
+      </div>
+      <div class="menu">
+        <a href="cafe-bakery.html">베이커리</a>
+        <a href="cafe-coffee.html">카페</a>
+        <a href="cafe-food.html" class="active">식사</a>
+        <a href="cafe-wine.html">와인</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div id="food">
+      <div class="sub-visu">
+        <img src="assets/image/cafe/food/food.jpg" alt="식사">
+      </div>
+      <section class="cafe-section">
+        <div class="sub-title">
+          <h1>식사</h1>
+          <h3>당일 영화티켓 구매시 <b>1인당 1인분<br>
+          10% 할인 혜택</b>을 받으실 수 있습니다.</h3>
+          <h5>델리 운영시간 10:45~19:00<br>
+          브레이크 타임 15:00~17:00</h5>
+      </div>
+      <ul class="tab-button twodepth">
+        <li class="active" data-alt="pasta">파스타</li>
+        <li data-alt="pilaf">필라프</li>
+      </ul>
+      <div class="food-container">
+        <div id="pasta" class="yummy-items active">
+          <div class="yummy-item food">
+            <img src="assets/image/cafe/food/01.png" alt="알리오 올리오">
+            <div class="yummy-info">
+              <p>알리오 올리오</p>
+              <p>14,400</p>
+            </div>
+          </div>
+          <div class="yummy-item food">
+            <img src="assets/image/cafe/food/02.png" alt="바질 쉬림프 파스타">
+            <div class="yummy-info">
+              <p>바질 쉬림프 파스타</p>
+              <p>12,900</p>
+            </div>
+          </div>
+          <div class="yummy-item food">
+            <img src="assets/image/cafe/food/03.png" alt="백합 봉골레 파스타">
+            <div class="yummy-info">
+              <p>백합 봉골레 파스타</p>
+              <p>12,900</p>
+            </div>
+          </div>
+          <div class="yummy-item food">
+            <img src="assets/image/cafe/food/04.png" alt="아마트리치아나 파스타">
+            <div class="yummy-info">
+              <p>아마트리치아나 파스타</p>
+              <p>12,400</p>
+            </div>
+          </div>
+          <div class="yummy-item food">
+            <img src="assets/image/cafe/food/05.png" alt="버섯 트러플 크림 파스타">
+            <div class="yummy-info">
+              <p>버섯 트러플 크림 파스타</p>
+              <p>12,400</p>
+            </div>
+          </div>
+          <div class="yummy-item food">
+            <img src="assets/image/cafe/food/06.png" alt="매콤 쉬림프 크림 파스타">
+            <div class="yummy-info">
+              <p>매콤 쉬림프 크림 파스타</p>
+              <p>12,900</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="food-container">
+        <div id="pilaf" class="yummy-items">
+          <div class="yummy-item food">
+            <img src="assets/image/cafe/food/07.png" alt="불고기 필라프">
+            <div class="yummy-info">
+              <p>불고기 필라프</p>
+              <p>11,400</p>
+            </div>
+          </div>
+          <div class="yummy-item food">
+            <img src="assets/image/cafe/food/08.png" alt="닭다리살 필라프">
+            <div class="yummy-info">
+              <p>닭다리살 필라프</p>
+              <p>11,900</p>
+            </div>
+          </div>
+          <div class="yummy-item food">
+            <img src="assets/image/cafe/food/09.png" alt="베이컨 김치 필라프">
+            <div class="yummy-info">
+              <p>베이컨 김치 필라프</p>
+              <p>11,400</p>
+            </div>
+          </div>
+          <div class="yummy-item food">
+            <img src="assets/image/cafe/food/10.png" alt="버섯 필라프">
+            <div class="yummy-info">
+              <p>버섯 필라프</p>
+              <p>11,400</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <nav class="footer-nav">
+      <a href="culture-anyway.html" class="nav-item">
+        <div class="nav-icon">
+          <img src="assets/image/icon-culture.png" alt="문화생활">
+        </div>
+        <span>문화생활</span>
+      </a>
+      <a href="movie-calendar.html" class="nav-item">
+        <div class="nav-icon">
+          <img src="assets/image/icon-movie.png" alt="영화생활">
+        </div>
+        <span>영화생활</span>
+      </a>
+      <div style="width: 40px;"></div>
+      <a href="cafe-bakery.html" class="nav-item active">
+        <div class="nav-icon">
+          <img src="assets/image/icon-cafe-active.png" alt="카페생활">
+        </div>
+        <span>카페생활</span>
+      </a>
+      <a href="info-map.html" class="nav-item">
+        <div class="nav-icon">
+          <img src="assets/image/icon-the-forest.png" alt="더숲안내">
+        </div>
+        <span>더숲안내</span>
+      </a>
+    </nav>
+    <div class="home-button">
+      <a href="index.html" class="nav-item">
+        <div class="nav-icon">
+          <img src="assets/image/icon-house.png" alt="홈">
+        </div>
+      </a>
+    </div>
+  </footer>
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/jquery-ui-1.10.4.custom.min.js"></script>
+<script src="assets/js/cafe-food.js"></script>
+</body>
+</html>
