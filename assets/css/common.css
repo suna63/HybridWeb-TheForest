@@ -75,17 +75,18 @@ a{
 }
 
 .max-title{
-  padding: 50px 20px 50px 20px;
+  padding: 50px 20px 20px 20px;
   width: 100%;
 }
 .max-title h3{
+  font-weight: 700;
   margin-bottom: 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .max-title p{
-  margin-top: 10px;
+  padding-top: 10px;
 }
 
 

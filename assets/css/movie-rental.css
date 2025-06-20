@@ -145,10 +145,10 @@ table{
   border-radius: var(--radius);
   box-shadow: var(--boxShadow);
 }
-table tr{
+table tr.week-item{
   position: relative;
 }
-table tr:not(:last-of-type)::after{
+table tr.week-item:not(:last-of-type)::after{
   content: '';
   position: absolute;
   left: 0;
@@ -247,6 +247,22 @@ textarea:focus {
   display: flex;
   gap: 10px;
   align-items: center;
+}
+
+.phone-input-wrap select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 10px 35px 10px 12px;
+  cursor: pointer;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+background-position: right 5px center;
+  background-size: 25px;
+}
+
+.phone-input-wrap select::-ms-expand {
+  display: none;
 }
 
 .phone-group select,

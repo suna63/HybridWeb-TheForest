@@ -17,7 +17,8 @@ header .main-menu{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 428px;
+  width: 100%;
+  max-width: 428px;
   height: 50px;
   padding: 0 20px;
 }
