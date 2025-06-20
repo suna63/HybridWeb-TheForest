@@ -187,6 +187,11 @@ h3.sub-title{
   line-height: 1.5;
 }
 
+.guide p{
+  font-size: 14px;
+  line-height: 1.5;
+}
+
 /* --대관 문의 신청-- */
 form{
   margin: auto;
