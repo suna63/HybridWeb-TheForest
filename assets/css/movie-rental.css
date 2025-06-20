@@ -148,7 +148,7 @@ table{
 table tr.week-item{
   position: relative;
 }
-table tr.week-item:not(:last-of-type)::after{
+table tr.week-item::before{
   content: '';
   position: absolute;
   left: 0;
