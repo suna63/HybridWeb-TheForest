@@ -132,27 +132,35 @@ h3.sub-title{
   margin-bottom: 50px;
 }
 
-table caption{
-  font-weight: 700;
+.expense-wrap .week-title{
   text-align: left;
-  margin: 0 0 10px 20px;
+  margin: 0 0 10px 10px;
 }
-table{
+
+.weekday h6{
+  margin-left: 20px;
+}
+.weekday ul{
   width: 100%;
-  border-collapse: separate;
-  border-spacing: 30px;
-  background-color: var(--white);
+  padding: 30px;
   border-radius: var(--radius);
+  background-color: var(--white);
   box-shadow: var(--boxShadow);
+  margin: 20px 0 30px;
 }
-table tr.week-item{
+.weekday li{
+  display: flex;
+  text-align: center;
   position: relative;
-  border: 1px solid #000;
+  align-items: center;
+  gap: 10px;
 }
-table tr.week-item:not(:last-of-type)::after{
+.weekday li:not(:last-of-type){
+  margin-bottom: 30px;
+}
+.weekday li:not(:last-of-type)::after{
   content: '';
   position: absolute;
-  display: block;
   left: 0;
   bottom: -15px;
   width: 100%;
@@ -160,28 +168,23 @@ table tr.week-item:not(:last-of-type)::after{
   background: linear-gradient(to right, #888 0 50%, transparent 50% 100%);
   background-size: 10px 5px;
   background-repeat: repeat-x;
+} 
+
+.weekday li .label{
+  flex: 2;
+  font-weight: 700;
 }
-table th{
-  width: 100px;
-  line-height: 1.5;
+.weekday li .price{
+  flex: 3;
 }
-table tr p{
+.weekday li p{
   font-size: 14px;
   color: #333;
 }
-table td{
+.weekday span{
   /* text-align: center; */
   text-align: left;
   line-height: 1.5;
-}
-
-.guide{
-  padding-bottom: 30px;
-}
-.guide p{
-  font-size: 14px;
-  line-height: 1.5;
-  color: #333;
 }
 
 /* --대관 문의 신청-- */
@@ -277,12 +280,12 @@ textarea:focus {
   outline: none;
   transition: border-color 0.3s ease;
   color: #333;
+  background: var(--white);
 }
 
 .phone-group select {
   flex-grow: 0;
   padding-right: 25px;
-  -webkit-padding-start: 30px;
 }
 
 .phone-group span {
