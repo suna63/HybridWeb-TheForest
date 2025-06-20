@@ -257,8 +257,8 @@ textarea:focus {
   cursor: pointer;
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
   background-repeat: no-repeat;
-background-position: right 5px center;
-  background-size: 25px;
+  background-position: right 5px center;
+  background-size: 20px;
 }
 
 .phone-input-wrap select::-ms-expand {
@@ -271,7 +271,6 @@ background-position: right 5px center;
   padding: 15px 10px;
   border: 1px solid #ccc;
   border-radius: var(--radius);
-  font-size: 12px;
   flex-grow: 1;
   outline: none;
   transition: border-color 0.3s ease;
