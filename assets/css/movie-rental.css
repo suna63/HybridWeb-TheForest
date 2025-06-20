@@ -148,12 +148,13 @@ table{
 table tr.week-item{
   position: relative;
 }
-table tr.week-item::before{
+table tr.week-item::after{
   content: '';
-  position: absolute;
+  position: relative;
+  display: block;
   left: 0;
   bottom: -15px;
-  width: 100%;
+  width: 100px;
   height: 1px;
   background: linear-gradient(to right, #888 0 50%, transparent 50% 100%);
   background-size: 10px 5px;
