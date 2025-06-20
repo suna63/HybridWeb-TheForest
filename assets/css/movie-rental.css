@@ -259,18 +259,6 @@ textarea:focus {
   align-items: center;
 }
 
-.phone-input-wrap select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 10px 35px 10px 12px;
-  cursor: pointer;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
-  background-repeat: no-repeat;
-  background-position: right 5px center;
-  background-size: 20px;
-}
-
 .phone-input-wrap select::-ms-expand {
   display: none;
 }
@@ -278,6 +266,7 @@ textarea:focus {
 .phone-group select,
 .phone-group input[type="tel"],
 .birthday-group input[type="text"] {
+  height: 49px;
   padding: 15px 10px;
   border: 1px solid #ccc;
   border-radius: var(--radius);
@@ -288,9 +277,17 @@ textarea:focus {
   background: var(--white);
 }
 
-.phone-group select {
+.phone-input-wrap select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   flex-grow: 0;
-  padding-right: 25px;
+  padding: 10px 35px 10px 10px;
+  cursor: pointer;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+  background-size: 20px;
 }
 
 .phone-group span {

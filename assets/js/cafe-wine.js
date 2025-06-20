@@ -20,8 +20,8 @@ $(document).ready(function(){
   $("#bottle ul li").slice(0,6).show(); //0,1,2까지 보임
 
   $(".load-more").click(function(){
-    $("#bottle ul li:hidden").slice(0,6).fadeIn();
-    if($("#bottle ul li:hidden").length == 0) {$(this).hide()}
+    $("#bottle ul li:hidden").slice(0,4).fadeIn();
+    if($("#bottle ul li:hidden").length == 0){$(this).addClass("end")}
   });
 
   $(".wine-modal-close, .wine-modal").click(function(){

@@ -12,8 +12,6 @@
 }
 #foundation .top-visu::before{
   content: '';
-  /* width: 100%; */
-  /* height: 100%; */
   inset: 0;
   position: absolute;
   background: rgba(0, 0, 0, 0.5);
@@ -88,15 +86,12 @@
 
 /* 더숲티비 */
 #foundation .deosuptv{
-  padding: 25px 0;
-}
-#foundation .deosuptv h2{
-  margin: 0 20px;
+  padding-bottom: 50px;
 }
 
 #foundation .deosuptv .swiper-slide {
   /* border: 1px solid blue; */
-  padding: 30px 20px;
+  padding: 0 20px 30px;
 }
 #foundation .deosuptv .card{
   /* border: 1px solid red; */
@@ -132,7 +127,7 @@
 /* 재단정보 */
 #foundation .found-info{
   background-color: var(--background);
-  padding: 25px 0;
+  padding-bottom: 50px;
 }
 
 #foundation .found-info h2{
@@ -147,6 +142,9 @@
 #foundation .found-info dl dt{
   font-weight: 700;
   margin-bottom: 5px;
+}
+#foundation .found-info dl dd{
+  font-weight: normal;
 }
 #foundation .found-info dl div{
   margin-bottom: 20px;

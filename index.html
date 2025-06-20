@@ -6,9 +6,9 @@
   <title>index</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/index-info.css">
+  <link rel="stylesheet" href="assets/css/index.css">
 </head>
-<body>
+<body id="index">
   
   <header>
     <div class="main-menu">
@@ -25,6 +25,16 @@
   </header>
 
   <main>
+    <!-- 메인비주얼 -->
+    <section class="full main-visu">
+      <div class="main-text">
+        <h1>Evreyday 더숲</h1>
+        <span></span>
+        <p>책, 빵, 그리고 <br> 우리가 좋아하는 모든 것</p>
+      </div>
+    </section>
+
+    <!-- 영화생활 -->
     <section class="movie-info">
       <h2 class="section-title">더숲의 영화생활</h2>
       <p class="intro-text">
@@ -54,12 +64,60 @@
       </a>
     </section>
 
-    <section class="deosup-info">
-      <h2>더숲 안내
-        <a href="info-map.html">
-          <img src="assets/image/gotolink.png" alt="바로가기">
-        </a>
-      </h2>
+    <section class="recommended-cafe">
+      <h2 class="section-title">이달의 추천 메뉴</h2>
+      <div class="recommended-container">
+        <div class="recommended-menu">
+          <div class="re-bakery">
+            <a href="cafe-bakery.html">
+              <img src="assets/image/cafe/bakery/03.jpg" alt="">
+              <p>핫치킨 샌드위치</p>
+              <p class="reco-menu-info">베이커리</p>
+            </a>
+          </div>
+          <div class="re-cafe">
+            <a href="cafe-bakery.html">
+              <img src="assets/image/cafe/cafe/02.png" alt="">
+              <p>아메리카노</p>
+              <p class="reco-menu-info">카페</p>
+            </a>
+          </div>
+          <div class="re-food">
+            <a href="cafe-food.html">
+              <img src="assets/image/cafe/food/03.png" alt="">
+              <p>백합 봉골레 파스타</p>
+              <p class="reco-menu-info">식사</p>
+            </a>
+          </div>
+          <div class="re-wine">
+            <a href="cafe-wine.html">
+              <img src="assets/image/cafe/cafe/sangria.png" alt="">
+              <p>상그리아 (RED/WHITE)</p>
+              <p class="reco-menu-info">와인</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="coffeebean-info full">
+      <h2 class="section-title">오직 더 숲에서,</h2>
+        <img class="coffeebeans" src="assets/image/cafe/cafe/coffeebean.jpg" alt="">
+          <div class="max-title">
+            <h3>더숲 커피 오리지널 <em>200g</em></h3>
+            <h2>13,000</h2>
+            <p>드닐과 함께 개발한 더숲 시그니처 원두. 밀크초콜릿·카라멜 베이스에 은은한 오렌지 산미로 부드러운 데일리 커피입니다.</p>
+        </div>
+    </section>
+
+    <section class="deosup-info full">
+      <div class="max-title">
+        <h3>더숲 안내
+          <a href="info-map.html">
+            <img src="assets/image/gotolink.png" alt="바로가기">
+          </a>
+        </h3>
+      </div>
       <div class="swiper info-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -145,9 +203,24 @@
       pagination: {
         el: ".swiper-pagination",
       },
-      spaceBetween: 20,
       loop: true,
+      autoplay:{
+        delay: 5000,
+      },
     });
+  </script>
+
+  <!-- 헤더 -->
+  <script>
+    window.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
+
+    if (window.scrollY > 650) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
   </script>
 
 </body>

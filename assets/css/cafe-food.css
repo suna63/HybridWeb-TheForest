@@ -2,9 +2,17 @@
 
 .sub-visu{object-fit: cover;}
 
-.sub-title h3 b{color: var(--primaryColor)}
-.sub-title h5{color: #666;}
-.sub-title h5 span{font-size: 12px;}
+.visu-title{padding-top: 0;}
+.visu-title h3{font-weight: 700;}
+.visu-title em{
+  color: var(--gray);
+  font-size: 14px;
+  font-style: normal;}
+.visu-title p b{color: var(--primaryColor);}
+.visu-title p.cafe-notice{
+  color: var(--gray);
+  font-size: 14px;
+  padding: 10px 0;}
 
 /* tab menu */
 
@@ -55,11 +63,6 @@ ul.tab-button li{
 
 /* display */
 
-.food-container{
-  max-width: 388px;
-  margin: 50px 0;
-}
-
 .yummy-items{display: none;}
 #sandwich.active{display: inherit;}
 #bread.active{display: inherit;}
@@ -73,9 +76,14 @@ ul.tab-button li{
 #pasta.active{display: inherit;}
 #pilaf.active{display: inherit;}
 
+.food-container{
+  max-width: 388px;
+  margin: 50px 0;
+}
 .yummy-item img{
-  width: 184px;
-  height: 184px;
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
   border-radius: 20px;
   background-color: var(--background);
 }
@@ -84,13 +92,14 @@ ul.tab-button li{
   display: grid;
   grid-template-columns: 1fr 1fr;  
   grid-template-rows: 2fr;
-  width: 390px;
+  width: 100%;
+  max-width: 358px;
   margin-bottom: 20px;
 }
 
 .yummy-item.food img{
-  width: 184px;
-  height: 184px;
+  width: 170px;
+  height: 170px;
   object-fit: contain;
   border-radius: 20px;
   background-color: var(--background);
@@ -105,10 +114,8 @@ ul.tab-button li{
 
 .yummy-info{
   text-transform: uppercase;
-  margin: 10px;
-  font-size: 16px;
-  line-height: 120%;
-  padding-top: 10px;
+  padding: 10px;
+  font-size: 12px;
 }
 
 .yummy-info p{position: relative;}
@@ -119,15 +126,17 @@ ul.tab-button li{
   font-style: normal;
   color: var(--primaryColor)
 }
-.yummy-info p:first-child{font-weight: 600;}
+.yummy-info p:first-child{
+  font-weight: 600;
+  font-size: 18px;}
 .yummy-info p:nth-child(2){
+  font-weight: 600;
   color: var(--primaryColor);
-  padding: 0 1px;
-  margin: 5px 0;
-  font-size: 14px;
+  margin: 10px 0;
+  font-size: 18px;
 }
 
-yummy-info p:last-child{font-size: 14px;}
+.yummy-info p.teainfo{font-size: 14px;}
 
 /* Pseudo-class */
 
@@ -167,28 +176,4 @@ yummy-info p:last-child{font-size: 14px;}
   text-align: center;
   padding: 1px;
   z-index: 3;
-}
-
-.yummy-info p:nth-child(2)::before{
-  position: absolute;
-  content: '';
-  bottom: 2px;
-  left: -3px;
-  width: 5px;
-  height: 16px;
-  transform: rotate(-2deg);
-  background-color: #447f55;
-  opacity: 0.1;
-  z-index: -2;
-}
-.yummy-info p:nth-child(2)::after{
-  position: absolute;
-  content: '';
-  bottom: 2px;
-  left: -3px;
-  width: 53px;
-  height: 16px;
-  transform: rotate(-2deg);
-  background-color: #d5fadc;
-  z-index: -3;
 }
