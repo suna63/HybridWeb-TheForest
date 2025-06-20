@@ -12,18 +12,18 @@
   <header>
     <div class="main-menu">
       <button onclick="history.back()" class="back">
-        <img src="/assets/image/back.png" alt="뒤로가기">
+        <img src="assets/image/back.png" alt="뒤로가기">
       </button>
       <a class="logo" href="index.html">
         <img src="assets/image/logo-w.png" alt="로고">
       </a>
       <p>
-        <img src="/assets/image/gotolink.png" alt="">
+        <img src="assets/image/gotolink.png" alt="">
       </p>
     </div>
     <div class="sub-menu">
       <div class="nav">
-        <img src="/assets/image/icon_house2.png" alt="홈">
+        <img src="assets/image/icon-movie-active.png" alt="홈">
         <span></span>
         영화생활
       </div>
@@ -231,7 +231,8 @@
       </a>
     </div>
   </footer>
-
+  
+  <!-- script -->
   <script>
     // 영화 그리드 마우스 휠 스크롤 기능
     document.querySelectorAll('.movie-grid').forEach(grid => {
@@ -271,5 +272,16 @@
       });
     });
   </script>
+
+
+  <!-- <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const swiper = new Swiper('.movie-grid.mySwiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        freeMode: true,
+      });
+    });
+  </script> -->
 </body>
 </html>

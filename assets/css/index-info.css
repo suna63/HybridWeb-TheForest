@@ -1,5 +1,70 @@
 @charset "utf-8"; 
 
+
+
+/* _____movie-info_____ */
+.movie-info{
+  text-align: center;
+  background-color: var(--background);
+}
+
+.movie-info .section-title{
+  margin-bottom: 20px;
+}
+
+.movie-info .intro-text{
+  font-size: 16px;
+  color: var(--gray);
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.movie-info .recommended-movies-preview{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.movie-info .movie-preview-item{
+  flex-shrink: 0;
+  width: 120px;
+  text-decoration: none;
+}
+
+.movie-info .movie-preview-item img{
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+.movie-info .preview-title{
+  font-size: 14px;
+  margin-top: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-info .value-prop-text{
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.movie-info .btn {
+  margin: 20px auto 0;;
+}
+
+.movie-info .btn .arrow{
+  margin-left: 10px;
+}
+
+
+
+/* _____deosup-info_____ */
 .deosup-info h2{
   display: flex;
   justify-content: space-between;
