@@ -18,7 +18,7 @@ header .main-menu{
   justify-content: space-between;
   align-items: center;
   width: 428px;
-  height: 45px;
+  height: 50px;
   padding: 0 20px;
 }
 header .main-menu button{
@@ -42,13 +42,14 @@ header .main-menu p img{
 /* 서브메뉴 */
 header .sub-menu{
   background-color: #fff;
-  height: 45px;
-  width: 428px;
+  border-bottom: 1px solid #aaaaaa;
+  height: 50px;
+  width: 100%;
+  max-width: 428px;
   padding: 0 20px;
-  line-height: 45px;
-  font-size: 14px;
+  line-height: 50px;
+  font-size: 15px;
   font-weight: 500;
-  box-shadow: var(--boxShadow);
   display: flex;
   justify-content: space-between;
 }
@@ -74,7 +75,7 @@ header .sub-menu .nav span{
 
 header .sub-menu .menu{
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
 header .sub-menu .menu a{
   color: var(--gray);

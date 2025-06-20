@@ -2,16 +2,14 @@
 .full{
   background-color: var(--background);
 }
-.max-title{
+.visu-title{
   text-align: center;
   background: #fff;
   border-radius: 0 0 0 50px;
   padding: 50px 20px;
 }
 
-.max-title h4{
-  margin-bottom: 20px;
-  line-height: 1.5;
+.visu-title h3{
   font-weight: 700;
 }
 
