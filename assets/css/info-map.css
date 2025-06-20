@@ -4,7 +4,6 @@
   background-color: var(--white);
 }
 
-
 #info .cards{
   display: flex;
   flex-direction: column;

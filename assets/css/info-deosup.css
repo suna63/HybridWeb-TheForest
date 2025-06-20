@@ -112,11 +112,13 @@
 #academyhouse .location h4{
   margin-bottom: 20px;
 }
+
 #cultureplex .location iframe,
 #choso .location iframe,
 #sojeon .location iframe,
 #academyhouse .location iframe{
   border-radius: var(--radius);
+  width: 100%;
 }
 
 #cultureplex .fee{

@@ -2,7 +2,6 @@
 
 .sub-visu{object-fit: cover;}
 
-.sub-title h1{margin-bottom: 30px;}
 .sub-title h3 b{color: var(--primaryColor)}
 .sub-title h5{color: #666;}
 .sub-title h5 span{font-size: 12px;}
