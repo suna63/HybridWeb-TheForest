@@ -147,8 +147,9 @@ table{
 }
 table tr.week-item{
   position: relative;
+  border: 1px solid #000;
 }
-table tr.week-item::after{
+table tr.week-item:not(:last-of-type)::after{
   content: '';
   position: absolute;
   display: block;
@@ -281,6 +282,7 @@ textarea:focus {
 .phone-group select {
   flex-grow: 0;
   padding-right: 25px;
+  -webkit-padding-start: 30px;
 }
 
 .phone-group span {
