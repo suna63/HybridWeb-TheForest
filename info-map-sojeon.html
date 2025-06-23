@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>소전미술관 안내</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/info-deosup.css">
 </head>
@@ -21,11 +22,12 @@
       </p>
     </div>
     <div class="sub-menu">
-      <div class="nav">
-        <img src="assets/image/icon-the-forest-active.png" alt="홈">
-        <span></span>
-        더숲안내
-      </div>
+      <a href="info-map.html">
+        <div class="nav">
+          <img src="assets/image/icon-the-forest-active.png" alt="홈">
+          더숲안내
+        </div>
+      </a>
       <div class="menu">
         <a href="info-map.html" class="active">오시는 길</a>
         <a href="info-seminar.html">세미나룸</a>
@@ -34,10 +36,22 @@
     </div>
   </header>
 
+  <div id="gototop">
+    <a class="top" href="#">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+  </div>
+  
   <main>
     <section class="full">
-      <div class="sub-visu">
-        <img src="assets/image/sojeon.jpg" alt="더숲소전미술관">
+      <div class="sub-visu swiper sojeon-swiper">
+        <div class="swiper-wrapper">
+          <img src="assets/image/sojeon1.jpg" alt="더숲소전미술관" class="swiper-slide visu1">
+          <img src="assets/image/sojeon2.jpg" alt="더숲소전미술관" class="swiper-slide visu2">
+          <img src="assets/image/sojeon3.jpeg" alt="더숲소전미술관" class="swiper-slide visu3">
+          <img src="assets/image/sojeon4.jpeg" alt="더숲소전미술관" class="swiper-slide visu4">
+        </div>
+        <div class="swiper-pagination"></div>
       </div>
     </section>
     <section class="main-desc">
@@ -64,10 +78,10 @@
         </div>
       </div>
     </section>
-    <section class="location">
+    <section class="location division">
       <h4>위치</h4>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3167.370348215692!2d126.78289717642657!3d37.45197683068796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b633b18a1ac4b%3A0xafb08634de564e64!2z642U7IiyIOyGjOyghOuvuOyIoOq0gA!5e0!3m2!1sko!2skr!4v1750065541997!5m2!1sko!2skr" width="388" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <a href="https://www.google.com/maps/dir//%EA%B2%BD%EA%B8%B0%EB%8F%84+%EC%8B%9C%ED%9D%A5%EC%8B%9C+%EC%86%8C%EB%9E%98%EC%82%B0%EA%B8%B8+41+%EB%8D%94%EC%88%B2+%EC%86%8C%EC%A0%84%EB%AF%B8%EC%88%A0%EA%B4%80/data=!4m17!1m7!3m6!1s0x357b633b18a1ac4b:0xafb08634de564e64!2z642U7IiyIOyGjOyghOuvuOyIoOq0gA!8m2!3d37.4519726!4d126.7854721!16s%2Fg%2F11vwkp9nwr!4m8!1m0!1m5!1m1!1s0x357b633b18a1ac4b:0xafb08634de564e64!2m2!1d126.7854721!2d37.4519726!3e3?entry=ttu&g_ep=EgoyMDI1MDYxNi4wIKXMDSoASAFQAw%3D%3D" class="btn">길찾기</a>
+      <div id="daumRoughmapContainer1750612676475" class="root_daum_roughmap root_daum_roughmap_landing" style="width: 100%;"></div>
+      <a  target="_blank" href="https://map.kakao.com/?from=roughmap&amp;eName=%EB%8D%94%EC%88%B2%20%EC%86%8C%EC%A0%84%EB%AF%B8%EC%88%A0%EA%B4%80&amp;eX=452551.0000000026&amp;eY=1097992.0000000019" class="btn">길찾기</a>
     </section>
 
   </main>
@@ -108,5 +122,25 @@
       </a>
     </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+  <script charset="UTF-8">
+
+    var swiper = new Swiper(".sojeon-swiper", {
+      pagination: {
+        el: ".sojeon-swiper .swiper-pagination",
+      },
+      loop: true,
+    });
+
+    new daum.roughmap.Lander({
+      "timestamp" : "1750612676475",
+      "key" : "4zkr6eg3otr",
+      // "mapWidth" : "388",
+      "mapHeight" : "360"
+    }).render();
+  </script>
 </body>
 </html>

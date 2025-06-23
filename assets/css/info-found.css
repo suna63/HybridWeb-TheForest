@@ -38,49 +38,61 @@
   /* border: 1px solid #000; */
   display: flex;
   flex-direction: column;
+  /* height: calc(100vh - 90px - 61px); */
 }
 #foundation .contribution .business{
   /* border: 1px solid red; */
-  flex: 1;
+  /* flex: 1; */
+  height: 170px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
+  text-align: right;
   padding: 0 20px;
   position: relative;
+  margin-top: 5px;
+}
+#foundation .business::after{
+  content: '';
+  position: absolute;
+  inset: 0;
+  /* z-index: 0; */
+  width: 100%;
+  height: 5px;
+  top: -5px;
+  left: 0;
+  background-color: var(--white);
 }
 #foundation .business::before{
   content: '';
-  width: 100%;
-  height: 100%;
   position: absolute;
-  left: 0;
-  top: 0;
+  inset: 0;
   z-index: 0;
 }
 #foundation .business1::before{
-  background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1)), url(../image/business1.jpg) no-repeat center/cover;
+  background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../image/business1.jpg) no-repeat center/cover;
 }
 #foundation .business2::before{
-  background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1)), url(../image/21.jpg) no-repeat center 85%/cover;
+  background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../image/21.jpg) no-repeat center 85%/cover;
 }
 #foundation .business3::before{
-  background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1)), url(../image/13.jpg) no-repeat center 40%/cover;
+  background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../image/13.jpg) no-repeat center 40%/cover;
 }
 #foundation .business4::before{
-  background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1)), url(../image/business4.jpg) no-repeat center 65%/cover;
+  background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../image/business4.jpg) no-repeat center 65%/cover;
 }
-#foundation .business:nth-of-type(odd)::before{
+/* #foundation .business:nth-of-type(odd)::before{
   transform: scaleX(-1);
-}
-#foundation .business:nth-of-type(even){
+} */
+/* #foundation .business:nth-of-type(even){
   text-align: right;
-}
+} */
 #foundation .business-text{
   position: relative;
   color: var(--white);
   padding: 20px 0;
 }
-#foundation .business-text h3{
+#foundation .business-text h4{
   font-weight: 600;
 }
 
@@ -127,11 +139,7 @@
 /* 재단정보 */
 #foundation .found-info{
   background-color: var(--background);
-  padding-bottom: 50px;
-}
-
-#foundation .found-info h2{
-  margin-left: 20px;
+  padding-bottom: 10px;
 }
 
 #foundation .found-info dl{
@@ -154,7 +162,9 @@
 }
 
 /* 서류 */
-
+#foundation .doc h3{
+  font-weight: 700;
+}
 #foundation .doc li{
   padding: 20px;
   border-top: 1px solid var(--lightgray);

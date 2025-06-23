@@ -1,5 +1,5 @@
 @charset "utf-8"; 
-
+html{scroll-behavior: smooth;}
 :root{
   --black: #121212;
 	--gray: #666;
@@ -132,10 +132,33 @@ a.btn{
   border-radius: var(--radius);
   color: #fff;
   background-color: var(--primaryColor);
-  margin: 20px auto;
+  margin: 20px auto 0;
   transition: 0.3s ease-in-out;
 }
 a.btn:hover {
   background: #0a3a1f;
 }
   
+
+/* 탑버튼 */
+#gototop{
+  z-index: 888;
+  position: fixed;
+  bottom: 75px;
+  width: 100%;
+  max-width: 428px;
+  display: flex;
+  justify-content: end;
+  padding: 0 20px;
+}
+.top{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.5);
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  color: var(--primaryColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

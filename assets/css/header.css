@@ -67,12 +67,6 @@ header .sub-menu .nav{
   color: var(--primaryColor);
   font-size: 14px;
 }
-header .sub-menu .nav span{
-  width: 2px;
-  height: 2px;
-  border-radius: 100%;
-  background-color: var(--primaryColor);
-}
 
 header .sub-menu .menu{
   display: flex;

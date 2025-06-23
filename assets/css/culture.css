@@ -85,7 +85,7 @@
 
 /* 중간카드 */
 .swiper.mySwiper{
-  padding: 30px 20px;
+  padding: 10px 20px;
   overflow: visible;
   background-color: #fff;
 
@@ -97,7 +97,7 @@
 .program-img{
   width: 250px;
   height: 250px;
-  border-radius: 20px;
+  border-radius: var(--radius);
 }
 .program-text{
   width: 250px;

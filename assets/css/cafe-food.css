@@ -11,8 +11,7 @@
 .visu-title p b{color: var(--primaryColor);}
 .visu-title p.cafe-notice{
   color: var(--gray);
-  font-size: 14px;
-  padding: 10px 0;}
+  font-size: 14px;}
 
 /* tab menu */
 
@@ -84,7 +83,7 @@ ul.tab-button li{
   width: 170px;
   height: 170px;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 3px;
   background-color: var(--background);
 }
 
@@ -101,7 +100,7 @@ ul.tab-button li{
   width: 170px;
   height: 170px;
   object-fit: contain;
-  border-radius: 20px;
+  border-radius: 3px;
   background-color: var(--background);
 }
 

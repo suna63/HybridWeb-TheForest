@@ -7,8 +7,7 @@
 .visu-title p b{color: var(--primaryColor);}
 .visu-title p.cafe-notice{
   color: #666;
-  font-size: 14px;
-  padding: 10px 0;}
+  font-size: 14px;}
 
 /* tab menu */
 ul.tab-button {
@@ -66,13 +65,16 @@ ul.tab-button li{
 .wine-item{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
 .wine-item:last-child{margin-bottom:0;}
 
 .wine-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 170px;
   height: 260px;
   padding: 10px;
@@ -82,20 +84,27 @@ ul.tab-button li{
 
 .wine-info h5{
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .wine-info p{
-  font-size: 14px;
   color: var(--gray);
+  font-size: 14px;
   padding: 10px 0;
+}
+
+.wine-info h6{
+  color: var(--primaryColor);
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 20px;
 }
 
 .wine-info button{
   width: 155px;
   height: 30px;
   border: 1.5px solid var(--primaryColor);
-  border-radius: 10px;
+  border-radius: 3px;
   background-color: #fff;
   color: var(--primaryColor);
   font-weight: 600;
@@ -111,7 +120,7 @@ ul.tab-button li{
 .wine-img img{
   width: 160px;
   height: 260px;
-  border-radius: 20px;
+  border-radius: 3px;
   object-fit: cover;
 }
 
@@ -126,7 +135,7 @@ ul.wine-binery{
 
 .wine-list{
   width: 100%;
-  height: 322px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -142,13 +151,17 @@ ul.wine-binery{
 .wine-list img{
   width: 160px;
   height: auto;
-  border-radius: 20px;
+  border-radius: 3px;
   object-fit: cover;
   cursor: pointer;
 }
 
+.wine-list-info{
+  padding: 10px 5px;
+  word-break: break-all;
+}
+
 .wine-list h5{
-  padding: 5px;
   text-align: left;
   font-weight: 600;
   max-width: 160px;
@@ -156,10 +169,15 @@ ul.wine-binery{
 }
 
 .wine-list p{
-  padding: 0 5px;
+  padding: 5px 0;
   max-width: 160px;
   font-size: 14px;
   color: var(--gray);
+}
+
+.wine-list h6{
+  font-weight: 500;
+  color: var(--primaryColor);
 }
 
 .load-more{
@@ -168,7 +186,7 @@ ul.wine-binery{
   width: 160px;
   height: 30px;
   border: 1.5px solid var(--primaryColor);
-  border-radius: 10px;
+  border-radius: 3px;
   background-color: #fff;
   color: var(--primaryColor);
   font-weight: 600;
@@ -185,32 +203,27 @@ ul.wine-binery{
 
 /* modal */
 .wine-modal{
-	display: none; 
-	position: absolute; 
-	left: 0; 
-	top: 0;
-	width: 100%;
-	height: 100vh; 
-	background: rgba(0,0,0,0.7); 
-	z-index: 1000;
-	overflow: hidden;
+  position: absolute;
+  display: none;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
 }
 
 .wine-modal-box{
-	position: relative;
-	width: 100%;
-  height: 100%;
-  margin: auto;
-}
-
-.wine-modal-content{
 	position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: 75%;
-	max-width: 500px;
-	height: auto;
+  top: 50%; 
+  width: 400px;
+  height: 600px; 
+  padding: 40px;  
+  text-align: center;
+  background-color: rgb(255,255,255);
+  border-radius: 3px; 
+  box-shadow: 0 2px 3px 0 rgba(34,36,38,0.15);
+  transform: translateY(-50%);
 }
 
 /* Pseuco-Class */
@@ -220,7 +233,7 @@ ul.wine-binery{
   position: absolute;
   content: 'DRY';
   top: 0;
-  left: 5px;
+  left: 0px;
   width: 50px;
   height: 20px;
   line-height: 20px;
@@ -238,7 +251,7 @@ ul.wine-binery{
   position: absolute;
   content: 'SWEET';
   top: 0;
-  left: 5px;
+  left: 0;
   width: 50px;
   height: 20px;
   line-height: 20px;
@@ -256,7 +269,7 @@ ul.wine-binery{
   position: absolute;
   content: 'RED';
   top: 0;
-  left: 55px;
+  left: 50px;
   width: 50px;
   height: 20px;
   line-height: 20px;
@@ -274,7 +287,7 @@ ul.wine-binery{
   position: absolute;
   content: 'WHITE';
   top: 0;
-  left: 55px;
+  left: 50px;
   width: 50px;
   height: 20px;
   line-height: 20px;

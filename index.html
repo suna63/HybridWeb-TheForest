@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>index</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/culture.css">
 </head>
 <body id="index">
   
@@ -24,26 +25,121 @@
     </div>
   </header>
 
+  <!-- 탑버튼 -->
+  <div id="gototop">
+    <a class="top" href="#">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+  </div>
+
   <main>
     <!-- 메인비주얼 -->
     <section class="full main-visu">
-      <div class="main-text">
+      <div class="main-text fade-up">
         <h1>Evreyday 더숲</h1>
         <span></span>
         <p>책, 빵, 그리고 <br> 우리가 좋아하는 모든 것</p>
       </div>
     </section>
 
+    <!-- 더숲 -->
+    <section class="about">
+      <div class="about-title fade-up">
+        <p>About</p>
+        <h2>deosup</h2>
+      </div>
+      <div class="about-set">
+        <div class="about-item fade-up">
+          <img src="assets/image/23.png" alt="사진">
+          <p>책과 영화와 <br> 미술이 있는</p>
+        </div>
+        <div class="about-item fade-up">
+          <p>빵과 와인과 <br> 파스타와 <br> 커피가 있는</p>
+          <img src="assets/image/24.png" alt="사진">
+        </div>
+        <div class="about-item fade-up">
+          <img src="assets/image/2.jpg" alt="사진">
+          <p>하루하루 새로운 컬처플렉스 <br> 더숲</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 문화생활 -->
+    <section class="full culture-info">
+      <div class="gotodeosup fade-up">
+        <div class="deosup-set">
+          <img class="deosup-img" src="assets/image/22.png" alt="더숲">
+          <div class="doesup-txt">
+            이달의 도서는?
+            <p>아무튼, 더숲 6월호</p>
+          </div>
+        </div>
+        <a href="culture-landing01.html">
+          <i class="fa-solid fa-chevron-right"></i>
+        </a>
+      </div>
+      <div class="culture-wrap">
+        <div class="culture-title fade-up">
+          <h2>더숲, 이달의 프로그램</h2>
+          <span>더숲에서 진행하는 활동에 참여해보세요</span>
+        </div>
+        <div class="swiper mySwiper fade-up">
+          <div class="swiper-wrapper program-card-list">
+            <div class="swiper-slide program-card">
+              <a href="culture-landing02.html">
+                <img class="program-img" src="assets/image/anyway4.png" alt="프로그램포스터">
+              <div class="program-text">
+                <h6>
+                  [기획전] <br>
+                  제25회 한국퀴어영화제
+                </h6>
+                <p>더숲아트시네마</p>
+                <p>2025.06.20 ~ 06.22</p>
+              </div>
+              </a>
+            </div>
+            <div class="swiper-slide program-card">
+              <a href="culture-landing02.html">
+                <img class="program-img" src="assets/image/academy1-1.png" alt="프로그램포스터">
+                <div class="program-text">
+                  <h6>
+                    미야자키 하야오 <br>
+                    &lt;자연의 영혼> x &lt;지구 끝의 온실>
+                  </h6>
+                  <p>상주작가프로그램</p>
+                  <p>2025.06.26</p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide program-card">
+              <a href="culture-landing02.html">
+                <img class="program-img" src="assets/image/academy3-1.jpg" alt="프로그램포스터">
+                <div class="program-text">
+                  <h6>
+                    우리는 서로를 펼치고 <br>
+                    유현아 x 권민경
+                  </h6>
+                  <p>낭독회</p>
+                  <p>2025.06.27</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     <!-- 영화생활 -->
     <section class="movie-info">
-      <h2 class="section-title">더숲의 영화생활</h2>
-      <p class="intro-text">
+      <h2 class="section-title fade-up">더숲의 영화생활</h2>
+      <p class="intro-text fade-up">
         일상 속 특별한 영화적 순간을 더숲에서 경험하세요.<br>
         복잡한 생각은 잠시 멈추고,<br>
         스크린이 선사하는 새로운 세계에 빠져들 시간.
       </p>
 
-      <div class="recommended-movies-preview">
+      <div class="recommended-movies-preview fade-up">
         <a href="movie-recommended.html" class="movie-preview-item">
           <img src="assets/image/movie-happyend.jpg" alt="해피엔드">
           <div class="preview-title">해피엔드</div>
@@ -54,20 +150,22 @@
         </a>
       </div>
 
-      <p class="value-prop-text">
+      <p class="value-prop-text fade-up">
         개봉작부터 놓쳐선 안 될 예술 영화, 깊이 있는 기획전까지.<br>
         더숲이 엄선한 작품들은 단순한 관람을 넘어,<br>
         당신의 삶에 새로운 영감을 불어넣어 드립니다.
       </p>
-      <a href="movie-calendar.html" class="btn">
+      <a href="movie-calendar.html" class="btn fade-up fade-up">
         지금, 더숲의 상영작을 만나보세요 ! <span class="arrow">→</span>
       </a>
     </section>
 
+
+    <!-- 카페생활 -->
     <section class="recommended-cafe">
-      <h2 class="section-title">이달의 추천 메뉴</h2>
+      <h2 class="section-title fade-up">이달의 추천 메뉴</h2>
       <div class="recommended-container">
-        <div class="recommended-menu">
+        <div class="recommended-menu fade-up">
           <div class="re-bakery">
             <a href="cafe-bakery.html">
               <img src="assets/image/cafe/bakery/03.jpg" alt="">
@@ -100,64 +198,26 @@
       </div>
     </section>
 
-    <section class="coffeebean-info full">
-      <h2 class="section-title">오직 더 숲에서,</h2>
-        <img class="coffeebeans" src="assets/image/cafe/cafe/coffeebean.jpg" alt="">
-          <div class="max-title">
-            <h3>더숲 커피 오리지널 <em>200g</em></h3>
-            <h2>13,000</h2>
-            <p>드닐과 함께 개발한 더숲 시그니처 원두. 밀크초콜릿·카라멜 베이스에 은은한 오렌지 산미로 부드러운 데일리 커피입니다.</p>
+    <section class="coffeebean-info">
+      <h2 class="section-title fade-up">오직 더 숲에서,</h2>
+        <img class="coffeebeans fade-up" src="assets/image/cafe/cafe/coffeebean.jpg" alt="">
+        <div class="sub-title fade-up">
+          <h4>더숲 커피 오리지널 <em>200g</em></h4>
+          <h5>13,000</h5>
+          <p>드닐과 함께 개발한 더숲 시그니처 원두. 밀크초콜릿·카라멜 베이스에 은은한 오렌지 산미로 부드러운 데일리 커피입니다.</p>
         </div>
     </section>
 
+    <!-- 더숲안내 -->
     <section class="deosup-info full">
-      <div class="max-title">
-        <h3>더숲 안내
-          <a href="info-map.html">
-            <img src="assets/image/gotolink.png" alt="바로가기">
-          </a>
-        </h3>
-      </div>
-      <div class="swiper info-swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="assets/image/cultureplex.jpg" alt="더숲컬처플렉스">
-            <div class="desc">
-              <h4>더숲 - 컬처플렉스</h4>
-              <p>deosup cultureplex</p>
-              <a href="info-map-cultureplex.html" class="btn">View More</a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="assets/image/chosochaekbang.jpg" alt="더숲초소책방">
-            <div class="desc">
-              <h4>더숲 - 초소책방</h4>
-              <p>deosup chosochaekbang</p>
-              <a href="info-map-choso.html" class="btn">View More</a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="assets/image/sojeon.jpg" alt="더숲소전미술관">
-            <div class="desc">
-              <h4>더숲 - 소전미술관</h4>
-              <p>deosup sojeon</p>
-              <a href="info-map-sojeon.html" class="btn">View More</a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="assets/image/academyhouse.jpg" alt="더숲아카데미하우스">
-            <div class="desc">
-              <h4>더숲 - 아카데미하우스</h4>
-              <p>deosup academy house</p>
-              <a href="info-map-academy.html" class="btn">View More</a>
-            </div>
-          </div>
+      <h2 class="fade-up">더숲이 만드는 공간</h2>
+        <div class="deosup-place fade-up">
+          <img src="assets/image/cultureplex1.jpg" alt="더숲컬처플렉스">
+          <a href="info-map.html" class="btn">View List</a>
         </div>
-        <div class="swiper-pagination"></div>
-      </div>
     </section>
-
   </main>
+
 
   <footer class="footer">
     <nav class="footer-nav">
@@ -222,6 +282,17 @@
     }
   });
   </script>
+
+  <!-- 문화생활  -->
+  <script>
+    const cultureSwiper = new Swiper('.swiper.mySwiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+      freeMode: true,
+    });
+  </script>
+
+  <script src="assets/js/index.js"></script>
 
 </body>
 </html>

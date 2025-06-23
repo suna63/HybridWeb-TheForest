@@ -22,11 +22,12 @@
       </p>
     </div>
     <div class="sub-menu">
-      <div class="nav">
-        <img src="assets/image/icon-the-forest-active.png" alt="홈">
-        <span></span>
-        더숲안내
-      </div>
+      <a href="info-map.html">
+        <div class="nav">
+          <img src="assets/image/icon-the-forest-active.png" alt="홈">
+          더숲안내
+        </div>
+      </a>
       <div class="menu">
         <a href="info-map.html">오시는 길</a>
         <a href="info-seminar.html" class="active">세미나룸</a>
@@ -35,10 +36,16 @@
     </div>
   </header>
 
+  <div id="gototop">
+    <a class="top" href="#">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+  </div>
+  
   <main>
     <section class="full">
       <div class="sub-visu">
-        <img src="assets/image/cultureplex.jpg" alt="더숲컬처플렉스">
+        <img src="assets/image/cultureplex1.jpg" alt="더숲컬처플렉스">
       </div>
     </section>
     <section class="main-desc">
@@ -50,27 +57,28 @@
         <p class="time"><i class="fa-solid fa-clock"></i>10 am ~ 10 pm / 연중무휴</p>
         <p class="price"><i class="fa-solid fa-won-sign"></i>사전예약 - 2,500원 / 30분 (최대 4시간)</p>
       </div>
+      <div class="icons">
+        <div class="icon">
+          <img src="assets/image/no_food.jpg" alt="음식물 반입금지">
+          <p>음식물 반입금지</p>
+        </div>
+        <div class="icon">
+          <img src="assets/image/movie_projector.jpg" alt="빔프로젝터">
+          <p>빔프로젝터
+            <br>이용료 : 3000원
+          </p>
+        </div>
+        <div class="icon">
+          <img src="assets/image/user_account.jpg" alt="이용가능인원">
+          <p>2인 ~ 18인</p>
+        </div>
+      </div>
       <a href="https://booking.naver.com/booking/10/bizes/1075277" class="btn">예약하기</a>
     </section>
-    <section class="icons">
-      <div class="icon">
-        <img src="assets/image/no_food.jpg" alt="음식물 반입금지">
-        <p>음식물 반입금지</p>
-      </div>
-      <div class="icon">
-        <img src="assets/image/movie_projector.jpg" alt="빔프로젝터">
-        <p>빔프로젝터
-          <br>이용료 : 3000원
-        </p>
-      </div>
-      <div class="icon">
-        <img src="assets/image/user_account.jpg" alt="이용가능인원">
-        <p>2인 ~ 18인</p>
-      </div>
-    </section>
-    <section class="room-info">
+    
+    <section class="room-info division">
       <h4>룸이용안내</h4>
-      <div class="swiper mySwiper2">
+      <div class="swiper seminar-swiper">
         <div class="swiper-wrapper">
           <div class="room swiper-slide">
             <img src="assets/image/seminar-room1.png" alt="">
@@ -174,7 +182,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <script>
-    var swiper = new Swiper(".mySwiper2", {
+    var swiper = new Swiper(".seminar-swiper", {
       slidesPerView: "auto",
       spaceBetween: 20,
     });

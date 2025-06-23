@@ -11,8 +11,7 @@
   <!-- 페이지마다 수정해야할 것
   sub-menu > nav : 현재위치활성화
   sub-menu > menu : 카테고리 메뉴, class="active" 적용
-
-  비어있는 span태그는 지우지 말아주세요!
+  sub-menu > a : 각 페이지 링크 적용
   -->
 
   <header>
@@ -28,11 +27,12 @@
       </p>
     </div>
     <div class="sub-menu">
-      <div class="nav">
-        <img src="assets/image/icon_house2.png" alt="홈">
-        <span></span>
-        영화생활
-      </div>
+      <a href="#">
+        <div class="nav">
+          <img src="assets/image/icon_house2.png" alt="홈">
+          영화생활
+        </div>
+      </a>
       <div class="menu">
         <a href="movie-calendar.html" class="active">시간표</a>
         <a href="movie-rental.html">대관문의</a>
@@ -40,20 +40,7 @@
     </div>
   </header>
 
-<!--   
-  <header>
-    <div class="main-menu">
-      <button onclick="history.back()" class="back" style="opacity: 0;">
-        <img src="/assets/image/back.png" alt="뒤로가기">
-      </button>
-      <a class="logo" href="index.html">
-        <img src="assets/image/logo-w.png" alt="로고">
-      </a>
-      <p>
-        <img src="/assets/image/gotolink.png" alt="">
-      </p>
-    </div>
-  </header> -->
+
 
 </body>
 </html>

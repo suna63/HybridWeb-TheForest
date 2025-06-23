@@ -24,7 +24,14 @@ $(document).ready(function(){
     if($("#bottle ul li:hidden").length == 0){$(this).addClass("end")}
   });
 
-  $(".wine-modal-close, .wine-modal").click(function(){
+      const modal = document.querySelector('.wine-modal');
+        const btnOpenModal=document.querySelector('.wine-list img');
+
+        btnOpenModal.addEventListener("click", ()=>{
+            modal.style.display="flex";
+        });
+
+  $(".wine-modal").click(function(){
     $(".wine-modal").stop().fadeOut();
     $(".wine-modal-content li").stop().fadeOut();
   });
