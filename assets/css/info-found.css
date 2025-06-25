@@ -115,6 +115,7 @@
 }
 #foundation .deosuptv iframe{
   width: 100%;
+  border: none;
 }
 
 #foundation .deosuptv .desc{

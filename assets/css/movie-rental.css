@@ -192,14 +192,17 @@ h3.sub-title{
 .weekday li .price{
   flex: 3;
 }
-.weekday li p{
-  font-size: 14px;
-  color: #333;
-}
-.weekday span{
+.weekday p{
   /* text-align: center; */
   text-align: left;
-  line-height: 1.5;
+  font-weight: 500;
+  /* line-height: 1.5; */
+}
+.weekday li span{
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
 }
 
 .guide p{
